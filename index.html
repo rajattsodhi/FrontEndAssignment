@@ -7,6 +7,8 @@
   <title>Rajatt Sodhi Profile</title>
 
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"><!-- Font awesome -->
+  
 
   
 </head>
@@ -37,7 +39,26 @@
   </section>
     
   <section><!-- // Portfolio -->
-    <div>
+    <div id="tab-container">
+      <input id="tab1" type="radio" name="tabs" checked>
+      <!--the *label* for the radio button forms the clickable tabs-->
+      <label for="tab1"><i class="fa fa-birthday-cake"></i><span>Tab one</span></label>
+
+      <input id="tab2" type="radio" name="tabs">
+      <label for="tab2"><i class="fa fa-github-alt"></i><span>Tab two</span></label>
+
+      <input id="tab3" type="radio" name="tabs">
+      <label for="tab3"><i class="fa fa-reddit-alien"></i><span>Tab three</span></label>
+        <div id="content1" class="tab-content">
+          First Tab    
+        </div>
+        <div id="content2" class="tab-content">
+          Second Tab    
+        </div>
+        <div id="content3" class="tab-content">
+          Third Tab    
+        </div>      
+            
     </div>
   </section>
 
@@ -152,8 +173,8 @@
   </section>    
     
   <footer>
-    <a href="" >fb</a>
-    <a href="">linkedin</a>
+    <a href="" ><i class="fa fa-facebook-f"></i></a>
+    <a href=""><i class="fa fa-linkedin"></i></a>
   </footer>      
 </body>
 </html>
