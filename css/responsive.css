@@ -1,0 +1,18 @@
+/*Responsive styles for different screens adaption*/
+
+/*------MENU on small screens*/
+@media screen and (max-width : 460px){
+	
+  /*adapt single menu items*/
+  #menu li,#menu li a {
+    width: 100%;
+  }
+  #menu {/*ul*/
+    position: static;
+    display: none;
+  }
+  /*Display 'show menu' link*/
+  .show-menu {
+    display:block;
+  }
+}

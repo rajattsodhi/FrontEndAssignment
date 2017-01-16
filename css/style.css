@@ -1,0 +1,51 @@
+/* CSS file for syling components*/
+
+/*--------- MENU ----------------*/
+#menu{/*remove styles from ul*/
+  list-style-type:none;
+  margin:0;
+  padding:0;
+}
+
+
+#menu li{/*display inline*/
+  display: inline-block;
+  float: left;  
+}
+
+#menu li a{
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  background-color: #000;
+  color: #fff;    
+  height: 50px; 
+  line-height: 50px;    
+}
+
+#menu li:hover a {/*hovering over link change background color and text color*/
+  background: #fff;
+  color: #000;
+}
+
+/*hidden show menu, only available on small screens*/
+.show-menu{
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    display: none;
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+}
+
+/*hide check box that allow to trigger the menu on small devices*/
+input[type=checkbox]{
+    display: none;
+}
+
+/*Show menu when checkbox will be checked*/
+input[type=checkbox]:checked ~ #menu{
+    display: block;
+}
+
