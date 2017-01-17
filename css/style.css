@@ -69,17 +69,77 @@ input[type=checkbox]:checked ~ #menu{
 /*---------MENU END----------------*/
 
 /*----------VIDEO--------*/
-video#my-video{
-  position: fixed;
-  top: -100px;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: 1;
-  background-size: cover;
-  background-attachment: fixed;
-  background-origin: content-box;    
+
+#video{
+  width: 100vh;
+  height: 100vh;
+    position: relative;
 }
+video#my-video{
+  
+  min-width:  100%;
+  min-height:  100%;
+   
+    height: auto;
+    
+}
+
+/*--------VIDEO END-------*/
+
+
+
+/*-------ABOUT-------*/
+#about{
+  margin: 0 auto;
+  width: 80%;    
+  
+}
+
+
+/*-------ABOUT END-------*/
+
+
+
+
+
+/*--------PORTFOLIO ----------*/
+.flip-container {
+  perspective: 1000px;
+}
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+  width: 320px;
+  height: 480px;
+}
+
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;   
+}
+
+/* hide back of pane during swap */
+.front, .back {
+ backface-visibility: hidden;
+ position: absolute;
+ top: 0;
+ left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+ z-index: 2;
+ /* for firefox 31 */
+ transform: rotateY(0deg);   
+}
+
+/* back, initially hidden pane */
+.back {
+ transform: rotateY(180deg);
+}
+
