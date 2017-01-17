@@ -3,9 +3,7 @@ body{
   margin: 0;    
 }
 
-#container{
-  width: 100%;    
-}
+
 
 .clear-fix{
   clear: both;    
@@ -68,7 +66,7 @@ input[type=checkbox]:checked ~ #menu{
 
 /*---------MENU END----------------*/
 
-/*----------VIDEO--------*/
+/*----------VIDEO--------*//*
 
 #video{
   width: 100vh;
@@ -82,7 +80,7 @@ video#my-video{
    
     height: auto;
     
-}
+}*/
 
 /*--------VIDEO END-------*/
 
@@ -90,8 +88,7 @@ video#my-video{
 
 /*-------ABOUT-------*/
 #about{
-  margin: 0 auto;
-  width: 80%;    
+  margin: 0 auto;    
   
 }
 
@@ -111,10 +108,7 @@ video#my-video{
   transform: rotateY(180deg);
 }
 
-.flip-container, .front, .back {
-  width: 320px;
-  height: 480px;
-}
+
 
 /* flip speed goes here */
 .flipper {

@@ -8,6 +8,7 @@
 
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/grid.css">   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"><!-- Font awesome -->
   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css"><!-- programming icons -->
   <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- meta tag used for mobile responsiveness -->
@@ -18,7 +19,7 @@
 </head>
 
 <body>
-  <div id="container">
+  <div class="container">
     <header>
       <nav>
         <!-- checkbox to display menu on demand on smaller screens -->
@@ -48,41 +49,41 @@
       <h1>About</h1>
       <p>A hard-working, self-motivated and reliable third year student at De Montfort University with a passion for Technology. Excellent organisational skills gained throughout academic life and as well as from my experience. I am a reliable person who aspires to gain further knowledge and experience in order to pursue a career within Technology. </p>
       <h2>Languages</h2>
-      <div>
-        <div>
+      <div class="row">
+        <div class="col-4">
           <i class="devicon-php-plain colored pr"></i>
           <h3>PHP</h3>          
         </div>
-        <div>
+        <div class="col-4">
           <i class="devicon-java-plain-wordmark pr"></i>
           <h3>Java</h3>          
-        </div>
-        <div>
+        </div >
+        <div class="col-4">
           <i class="devicon-c-plain colored pr"></i>
           <h3>C</h3>          
         </div>
-        <div>
+        <div class="col-4">
           <i class="devicon-cplusplus-plain colored pr"></i>
           <h3>C++</h3>          
-        </div>
-        <div>
+        </div >
+        <div class="col-4">
           <i class="devicon-html5-plain colored pr"></i>
           <h3>HTML</h3>          
         </div>
-        <div>
+        <div class="col-4">
           <i class="devicon-css3-plain colored pr"></i>
           <h3>CSS</h3>          
-        </div>
-        <div>
+        </div >
+        <div class="col-4">
           <i class="devicon-mysql-plain-wordmark coloredk pr"></i>
           <h3>MySQL</h3>          
         </div>    
       </div>
     </section>
     
-      <section id="test"><!-- // Portfolio -->
+      <section id="test" class="row"><!-- // Portfolio -->
       <h1>Portfolio</h1> 
-      <div class="flip-container">      
+      <div class="flip-container col-4" >      
         <div id="content1" class="flipper" >
        
           <div class="front">
@@ -97,7 +98,7 @@
           </div>   
         </div>
       </div>
-      <div class="flip-container">      
+      <div class="flip-container col-4">      
         <div id="content2" class="flipper" >
       
           <div class="front">
@@ -113,7 +114,7 @@
           </div>     
         </div>
       </div>
-      <div class="flip-container">      
+      <div class="flip-container col-4">      
         <div id="content3" class="flipper" >
       
           <div class="front">
