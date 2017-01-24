@@ -119,7 +119,7 @@ input[type=checkbox]:checked ~ #menu{
     
 }
 
-.front img{
+.f1_container .front img{
     width: 100%;
 }
 .f1_container {
@@ -129,6 +129,7 @@ input[type=checkbox]:checked ~ #menu{
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
+  transition: transform 2s;
 
 }
 .f1_container:hover .f1_card {
