@@ -2,12 +2,14 @@
 body{
   margin: 0;    
 }
-
-
-
-.clear-fix{
-  clear: both;    
+main{
+  width: 100%;
 }
+
+
+/*.clear-fix{
+  clear: both;    
+}*/
 /*--------- MENU ----------------*/
 header{
   width: 100%;
@@ -88,7 +90,8 @@ video#my-video{
 
 /*-------ABOUT-------*/
 #about{
-  margin: 0 auto;    
+  margin: 0 auto;
+  width: 100%;    
   
 }
 
@@ -102,10 +105,12 @@ video#my-video{
 /*--------PORTFOLIO ----------*/
 .flip-container {
   perspective: 1000px;
+  position: relative;
 }
 /* flip the pane when hovered */
 .flip-container:hover .flipper, .flip-container.hover .flipper {
   transform: rotateY(180deg);
+    
 }
 
 
@@ -114,7 +119,7 @@ video#my-video{
 .flipper {
   transition: 0.6s;
   transform-style: preserve-3d;
-  position: relative;   
+  position: absolute;   
 }
 
 /* hide back of pane during swap */

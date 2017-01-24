@@ -2,7 +2,7 @@
 
 .container{
   width: 100%; 
-  max-width: 1200px;
+ 
 
 }
 
@@ -15,6 +15,7 @@
 }
 
 [class*='col-'] {
+  box-sizing: border-box;    
   float: left; 
   min-height: 1px; 
   width: 8.33%; 
