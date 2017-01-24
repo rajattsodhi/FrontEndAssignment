@@ -1,9 +1,12 @@
 /*GRID for position elements */
 
 .container{
-  width: 100%; 
- 
 
+
+}
+
+.center{
+    text-align: center;
 }
 
 /*clearfix to avoid elements going outside the row */ 

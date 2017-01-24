@@ -35,21 +35,26 @@
           <li><a href="#">Contact</a></li>    
         </ul>
         
-      </nav>
+      </nav>        
       <div class="clear-fix"></div>
-    </header>      
-    <section id="video"><!-- // Video -->    
-      <video width="320" height="240" autoplay loop id="my-video">
-        <source src="video/video.mp4" type="video/mp4">
-        <source src="video/video.webm" type="video/webm">
-      </video>
-    </section>
+    </header>
+      <div id="intro">
+        <div id="logo">
+          <img src="images/logo.png" alt="logo">
+        </div> 
+        <div id="video">
+          <video  autoplay loop id="my-video">
+            <source src="video/video.mp4" type="video/mp4">
+            <source src="video/video.webm" type="video/webm">
+          </video>
+        </div>  
+      </div>      
     <main>
       <section id="about"><!-- // About -->
-      <h1>About</h1>
-      <p>A hard-working, self-motivated and reliable third year student at De Montfort University with a passion for Technology. Excellent organisational skills gained throughout academic life and as well as from my experience. I am a reliable person who aspires to gain further knowledge and experience in order to pursue a career within Technology. </p>
-      <h2>Languages</h2>
-      <div class="row">
+      <h1 class="center">About</h1>
+      <p class="center">A hard-working, self-motivated and reliable third year student at De Montfort University with a passion for Technology. Excellent organisational skills gained throughout academic life and as well as from my experience. I am a reliable person who aspires to gain further knowledge and experience in order to pursue a career within Technology. </p>
+      <h2 class="center">Languages</h2>
+      <div class="row center">
         <div class="col-4">
           <i class="devicon-php-plain colored pr"></i>
           <h3>PHP</h3>          
@@ -62,10 +67,6 @@
           <i class="devicon-c-plain colored pr"></i>
           <h3>C</h3>          
         </div>
-        <div class="col-4">
-          <i class="devicon-cplusplus-plain colored pr"></i>
-          <h3>C++</h3>          
-        </div >
         <div class="col-4">
           <i class="devicon-html5-plain colored pr"></i>
           <h3>HTML</h3>          
@@ -81,16 +82,16 @@
       </div>
     </section>
     
-      <section id="test" class="row"><!-- // Portfolio -->
+      <section id="test" class="row center"><!-- // Portfolio -->
       <h1>Portfolio</h1> 
-      <div class="flip-container col-4" >      
-        <div id="content1" class="flipper" >
+      <div class="f1_container col-4" >      
+        <div class="f1_card flipper" >
        
-          <div class="front">
+          <div class="front face">
             <h2>Blocked Stack C</h2>
             <img src="images/BlockedStack.png" alt="blocked stack portfolio">  
           </div>
-          <div class="back">
+          <div class="back face">
             <h2>Description</h2>
             <p>
             This project was about developing a blocked stack based data structure in C. Further addition implemented was displaying the data structure in the terminal. The obtain the result shown in the previous picture was achieved by using ASCII characters to representate the stack and arrows have been used to show how these blocks are linked. This project was very challenging for the output part and this allowed to show my coding skills.
@@ -98,15 +99,15 @@
           </div>   
         </div>
       </div>
-      <div class="flip-container col-4">      
-        <div id="content2" class="flipper" >
+      <div class="f1_container col-4">      
+        <div  class="f1_card" >
       
-          <div class="front">
+          <div class="front face">
             <h2>Module Chooser JavaFX</h2>
             <img src="images/ModuleChooser.png" alt="JavaFX based application">
           
           </div>
-          <div class="back">
+          <div class="back face">
             <h2>Description</h2>
             <p>
             This porject was about developing a module chooser for second year students in order to simplify the process of data gathering. This project was an assignment and it did not involved the data storing part on a database, but instead data was saved on a text file locally. This project allowed to develop the undertsanding of JavaFX and to apply the theory learnt from lectures to a real practical piece of work.
@@ -114,14 +115,14 @@
           </div>     
         </div>
       </div>
-      <div class="flip-container col-4">      
-        <div id="content3" class="flipper" >
+      <div class="f1_container col-4">      
+        <div class="f1_card" >
       
-          <div class="front">
+          <div class="front face">
             <h2>Terminal Based Text Editor</h2>
             <img src="images/Terminal.png" alt="Terminal based text editor"> 
           </div>
-          <div class="back">
+          <div class="back face">
             <h2>Description</h2>
             <p>
             This project represent the final year project for the course of Software Engineering at DMU. This project is still under development. The project is about developing a terminal based text editor as there are numerous text editors available for terminals but their user interface is usally not the best for beginners as they require memorizing numerous commands in order to use the editor in its full power.
@@ -129,6 +130,7 @@
           </div>     
         </div> 
       </div>
+             
             
       </section>
 
@@ -229,7 +231,7 @@
       <h1>Awards&amp;Certifications</h1>
       <div id="slider-container">
         <div class="images">
-          <img src="images/dmu.jpg" alt="DMU best first year student award">
+          <img src="images/english.png" alt="DMU best first year student award">
           <div class="text">DMU best first year student</div>    
         </div>
         <div class="images">
@@ -237,21 +239,21 @@
           <div class="text">PTE level b2 englsih certificate</div>    
         </div>
         <div class="images">
-          <img src="images/diploma.png" alt="Diploma in accountancy and computer programming">
+          <img src="images/english.png" alt="Diploma in accountancy and computer programming">
           <div class="text">Diploma in accountancy and computer programming</div>    
         </div>
         <div class="images">
-          <img src="images/worksafety.jpg" alt="Health and Safety certificate">
+          <img src="images/english.png" alt="Health and Safety certificate">
           <div class="text">Health and Safety certificate</div>    
         </div>
         <div class="images">
-          <img src="images/licence.jpg" alt="Car B2 Full UK licence">
+          <img src="images/english.png" alt="Car B2 Full UK licence">
           <div class="text">Car B2 Full UK licence</div>    
         </div>     
       </div>
        
       
-    </section>
+    </section> 
     
       <section><!-- // Contact -->
       <h1>Contact</h1>
