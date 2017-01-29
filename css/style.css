@@ -187,13 +187,18 @@ input[type=checkbox]:checked ~ #menu{
 #overflow {
 	width: 100%;
 	overflow: hidden;
+    
 }
 #cc-slides article img {
 	width: 100%;
 }
+#cc-slides{
+    position: relative;
+}
 #cc-slides .inner {
 	width: 500%;
 	line-height: 0;
+    
 }
 #cc-slides article {
 	width: 20%;
@@ -251,7 +256,8 @@ input[type=checkbox]:checked ~ #menu{
     color: #FFFFFF;
     font-style: italic;
     line-height: 20px;
-    bottom: 0;
+    top: 0;
+    left: 0;
     opacity: 0;
     position: absolute;
     text-align: left;
