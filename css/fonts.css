@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'evogria';
+  src: url('../fonts/evogria/Evogria.otf') format('truetype');
+       
+}
+
+
+@font-face {
+  font-family: 'evogria-italic';
+  src: url('../fonts/evogria/Evogria Italic.otf') format('truetype');
+       
+}
+
+
+
+@font-face {
+  font-family: 'open_sans';
+  src: url('../fonts/open_sans/OpenSans-Regular.ttf') format('truetype');
+       
+}

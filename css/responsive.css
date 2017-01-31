@@ -1,7 +1,7 @@
 /*Responsive styles for different screens adaption*/
 
 /*------MENU on small screens*/
-@media screen and (max-width : 460px){
+@media screen and (max-width : 610px){
 	
   /*adapt single menu items*/
   #menu li,#menu li a {
@@ -16,8 +16,16 @@
     display:block;
   }
     
+  .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12{/*go full scree*/
+      width: 100%;
+  }
+    
+  
+    
     
   /*-------SLIDER--------*/
    
 
 }
+
+
