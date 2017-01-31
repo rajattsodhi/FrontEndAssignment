@@ -4,6 +4,7 @@ function scrollTo(from, to, duration) {
         return;
     var difference = to - from.scrollTop;
     var perTick = difference / duration * 10;
+    console.log(from.scrollTop);
 
     setTimeout(function() {
         from.scrollTop = from.scrollTop + perTick;
@@ -16,5 +17,5 @@ function scrollTo(from, to, duration) {
 document.getElementById("portfolio-link").onclick = function() {
    var elmnt = document.getElementById("portfolio");   
     console.log(window.pageYOffset);
-scrollTo(document.body, elmnt.offsetTop-50, 1600);
+scrollTo(document.body, elmnt.offsetTop-50, 500);
 }
