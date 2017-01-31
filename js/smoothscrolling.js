@@ -1,21 +1,38 @@
 
-function scrollTo(from, to, duration) {
-    if (duration <= 0)
-        return;
-    var difference = to - from.scrollTop;
-    var perTick = difference / duration * 10;
-    console.log(from.scrollTop);
-
-    setTimeout(function() {
-        from.scrollTop = from.scrollTop + perTick;
-        if (from.scrollTop === to) return;
-        scrollTo(from, to, duration - 10);
-    }, 10);
-}
+//http://codereview.stackexchange.com/questions/13111/smooth-page-scrolling-in-javascript
+smoothScrollTo = function () {
+  var timer, start, factor;
+  
+  return function (target, duration) {
+    var offset = window.pageYOffset,
+        delta  = target - window.pageYOffset; // Y-offset difference
+    duration = duration || 1000;              // default 1 sec animation
+    start = Date.now();                       // get start time
+    factor = 0;
+    
+    if( timer ) {
+      clearInterval(timer); // stop any running animations
+    }
+    
+    function step() {
+      var y;
+      factor = (Date.now() - start) / duration; // get interpolation factor
+      if( factor >= 1 ) {
+        clearInterval(timer); // stop animation
+        factor = 1;           // clip to max 1.0
+      } 
+      y = factor * delta + offset;
+      window.scrollBy(0, y - window.pageYOffset);
+    }
+    
+    timer = setInterval(step, 10);
+    return timer;
+  };
+}();
 
 
 document.getElementById("portfolio-link").onclick = function() {
    var elmnt = document.getElementById("portfolio");   
-    console.log(window.pageYOffset);
-scrollTo(document.body, elmnt.offsetTop-50, 500);
+   //scrollTo(document.body, elmnt.offsetTop-50, 500);
+    smoothScrollTo(elmnt.offsetTop-50,500);
 }
