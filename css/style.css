@@ -175,6 +175,20 @@ input[type=checkbox]:checked ~ #menu{
 }
 
 /*--------PORTFOLIO END ----------*/
+/*--------EDUCATION ---------------*/
+
+#education{
+  display: flex;
+  justify-content: center;
+      
+}
+
+#education h1{
+      
+}
+
+
+/*--------EDUCATION END---------------*/
 
 /* -------- AWARD and CERTIFICATIONS------*/
 
