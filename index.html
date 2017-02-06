@@ -301,15 +301,31 @@
     
       <section id="contact"><!-- // Contact -->
         <h1>Contact</h1>
-        <form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
-	      <label for="name">Your name:</label><br />
-	      <input id="name" class="input" name="name" type="text" value="" size="30" /><br />
-	      <label for="email">Your email:</label><br />
-	      <input id="email" class="input" name="email" type="text" value="" size="30" /><br />
-	      <label for="message">Your message:</label><br />
-	      <textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br />
-	      <input id="submit_button" type="submit" value="Submit" />
-        </form>	
+        <div class="row">  
+        <form class="contact_form col-8" action="" method="post" name="contact_form">
+          <ul>
+            <li>
+              <span class="required_notification">* Denotes Required Field</span>
+            </li>
+            <li>
+              <label for="name">Name:</label>
+              <input type="text" name="name" placeholder="Full name" required />
+            </li>
+            <li>
+              <label for="email">Email:</label>
+              <input type="email" name="email" placeholder="example@example.com" required />
+              <span class="form_hint">Proper format "name@something.com"</span>
+            </li>
+            <li>
+              <label for="message">Message:</label>
+                <textarea name="message" cols="40" rows="6" required ></textarea>
+            </li>
+            <li>
+              <button class="submit" type="submit">Submit Form</button>
+            </li>
+          </ul>    
+        </form>
+        </div>
       </section>    
     
       
