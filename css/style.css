@@ -1,18 +1,21 @@
 /* CSS file for syling components*/
 body{
   margin: 0;
-  font-family: "open_sans", sans-serif;    
+  font-family: "open_sans", sans-serif; 
+    
 }
 main{
   width: 100%;
 }
 
 h1{
- font-family: "evogria";   
+ font-family: "evogria"; 
+    color: #678;
 }
 
 h2{
- font-family: "evogria-italic";   
+ font-family: "evogria-italic";
+    color: #678;
 }
 /*.clear-fix{
   clear: both;    
@@ -22,7 +25,7 @@ h2{
 
 header{
   width: 100%;
-  background-color: #000;
+  background-color: #fff;
   position: fixed;
   top: 0;
   z-index: 100;
@@ -40,7 +43,6 @@ header{
   display: inline-block;
   float: left;
   padding-left: 10px;
-  padding-left: 10px;
   text-transform:uppercase;    
 }
 
@@ -48,23 +50,21 @@ header{
   display: block;
   text-decoration: none;
   text-align: center;
-  background-color: #000;
-  color: #fff;    
+  color: #678;    
   height: 50px; 
   line-height: 50px;
   font-family: "evogria";     
 }
 
 #menu li:hover a {/*hovering over link change background color and text color*/
-  background: #fff;
   color: #000;
 }
 
 /*hidden show menu, only available on small screens*/
 .show-menu{
     text-align: center;
-    background-color: #000;
-    color: #fff;
+    background-color: #fff;
+    color: #678;
     display: none;
     height: 50px;
     line-height: 50px;
@@ -85,21 +85,24 @@ input[type=checkbox]:checked ~ #menu{
 }
 
 /* weather*----------------------*/
-/*#weather{
-    display: inline-block;
-}*/
+#weather{
+  float: right;
+  padding-right: 10px;    
+}
 #descr{
-    display: inline-block;
-    background-color: #000;
-  color: #fff;    
-  
-    margin: 0;
+    background-color: #fff;
+  color: #678;    
+  height: 50px; 
+  line-height: 50px;
+  font-family: "evogria"; 
+    
 }
 
 #icon{
-    height: 45px;
+    height: 50px;
     width: 50px;
-    display: inline-block;
+    display: block;
+    float: right;
    
 }
 
