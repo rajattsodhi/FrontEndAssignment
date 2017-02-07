@@ -18,6 +18,8 @@ h2{
   clear: both;    
 }*/
 /*--------- MENU ----------------*/
+
+
 header{
   width: 100%;
   background-color: #000;
@@ -80,6 +82,25 @@ input[type=checkbox]{
 input[type=checkbox]:checked ~ #menu{
     display: block;
     
+}
+
+/* weather*----------------------*/
+/*#weather{
+    display: inline-block;
+}*/
+#descr{
+    display: inline-block;
+    background-color: #000;
+  color: #fff;    
+  
+    margin: 0;
+}
+
+#icon{
+    height: 45px;
+    width: 50px;
+    display: inline-block;
+   
 }
 
 /*---------MENU END----------------*/
