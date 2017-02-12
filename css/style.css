@@ -111,10 +111,12 @@ input[type=checkbox]:checked ~ #menu{
 /*----------VIDEO--------*/
 
 
-#video{
+#intro{
     
     height: 100vh;
 }
+
+
 #my-video {
 /*  making the video fullscreen  */
   position: absolute;

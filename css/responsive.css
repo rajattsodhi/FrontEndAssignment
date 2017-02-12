@@ -31,6 +31,17 @@
       width: 100%;
   }
     
+  /*do not siplay video but the image instead*/
+    #video{
+        display: none;
+    }
+    #intro{
+        background-image: url(../images/video.jpg);
+        background-size: cover;
+        display: block;
+        
+    }
+    
   
     
     
