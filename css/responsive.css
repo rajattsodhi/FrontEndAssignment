@@ -42,12 +42,47 @@
         
     }
     
-  
-    
-    
-  /*-------SLIDER--------*/
    
 
 }
+
+@media screen and (max-width : 900px) and (min-width : 610px){
+    .col-4{
+        width: 50%; 
+    }
+    
+}
+
+@media screen and (min-width : 1024px){
+    .container{
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+    
+    header{
+        max-width: inherit;
+    }
+    
+    #intro{
+        max-width: 1024px;
+    }
+    #logo{
+        max-width: inherit;
+    }
+    #video{
+        max-width: 1024px;
+    }
+    #my-video{
+        max-width: inherit;
+        left: auto;
+        right: auto;
+        min-width: inherit;
+    }
+    
+}
+
+
+
+
 
 

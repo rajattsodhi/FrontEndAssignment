@@ -29,6 +29,7 @@ header{
   position: fixed;
   top: 0;
   z-index: 100;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.4);
 }
 
 
@@ -502,3 +503,15 @@ button.submit:active {
 
 
 /*-------FOOTER--------*/
+footer{
+    box-shadow: 0 0 3px rgba(0,0,0,0.4);
+}
+
+.fa{
+    font-size: 1.9em;
+    color: #678;
+}
+.fa:hover{
+    color: #000;
+}
+
