@@ -223,7 +223,7 @@ input[type=checkbox]:checked ~ #menu{
 #cc-slider input {
 	display: none;
 }
-#cc-slider label, a {
+#cc-slider label,#cc-slider a {
 	color: #ef023f;
 	cursor: pointer;
 	text-decoration: none;
