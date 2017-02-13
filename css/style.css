@@ -175,8 +175,9 @@ input[type=checkbox]:checked ~ #menu{
 .view .mask,.view .content {
    position: absolute;
    overflow: hidden;
-    top: 0; 
-	left: 0; 
+   top: 50%;
+   transform: translateY(-50%); 
+	 
 	
 }
 .view img {
