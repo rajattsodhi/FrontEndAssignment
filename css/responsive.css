@@ -53,7 +53,7 @@
     
 }
 
-@media screen and (min-width : 1024px){
+/*@media screen and (min-width : 1024px){
     .container{
         max-width: 1024px;
         margin: 0 auto;
@@ -65,21 +65,28 @@
     
     #intro{
         max-width: 1024px;
+        
     }
     #logo{
         max-width: inherit;
     }
     #video{
         max-width: 1024px;
+        top: 0;
+        min-height: inherit;
+        top: 0;
     }
     #my-video{
+        
         max-width: inherit;
         left: auto;
         right: auto;
+        top: 0;
         min-width: inherit;
+        max-height: inherit;
     }
     
-}
+}*/
 
 
 
