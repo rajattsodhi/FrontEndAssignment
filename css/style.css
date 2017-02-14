@@ -11,11 +11,20 @@ main{
 h1{
  font-family: "evogria"; 
     color: #678;
+    margin-top: 0;
 }
 
 h2{
  font-family: "evogria-italic";
     color: #678;
+}
+
+main > section:nth-of-type(odd) {
+    background: #e0e0e0;
+}
+
+section{
+ padding-top: 2%;   
 }
 /*.clear-fix{
   clear: both;    
@@ -153,6 +162,14 @@ input[type=checkbox]:checked ~ #menu{
     font-size: 4em;
   }
 
+#about p{
+ padding: 0 10%;
+    
+}
+
+
+
+
 /*-------ABOUT END-------*/
 
 /*------MAIN -------*/
@@ -228,6 +245,10 @@ input[type=checkbox]:checked ~ #menu{
 
 /*--------PORTFOLIO END ----------*/
 /*--------EDUCATION ---------------*/
+
+table th{
+text-align: left;    
+}
 
 
 
