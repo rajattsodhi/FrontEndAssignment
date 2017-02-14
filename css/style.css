@@ -49,13 +49,15 @@ header{
 #menu {/*ul*/
     position: static;
     display: none;
+    perspective: 1000px;
   }
 
 
 #menu li{
   
   padding-left: 10px;
-  text-transform:uppercase;    
+  text-transform:uppercase;
+    opacity: 0;
 }
 
 #menu li a{
@@ -96,9 +98,11 @@ input[type=checkbox]{
 
 /*Show menu when checkbox will be checked*/
 input[type=checkbox]:checked ~ #menu{
-    display: block;
-    
+    display: block;    
 }
+
+
+
 
 /* weather*----------------------*/
 
@@ -174,9 +178,6 @@ input[type=checkbox]:checked ~ #menu{
 
 
 /*-------ABOUT END-------*/
-
-/*------MAIN -------*/
-
 
 
 
@@ -578,6 +579,74 @@ footer{
     }
 }
 
+/*media query only for the animations on mobile phone vertical menu*/
+@media (max-width: 768px) {
+    /*animation for the vertical menu*/
+@keyframes menu{
+    0% {
+        opacity: 0;
+        transform: rotateY(-90deg) translate(30px);    
+    }
+    50%{opacity: 0.5;}
+    100% {
+        opacity: 1;
+        transform: rotateY(0deg) translate(0px);
+    }
+}
+
+/*animate single li*/
+input[type=checkbox]:checked ~ #menu li:nth-child(1){
+    animation: menu;
+    animation-timing-function: ease-in-out;
+    animation-duration: 150ms;
+    animation-delay: 0ms;
+    animation-fill-mode: forwards;
+}
+input[type=checkbox]:checked ~ #menu li:nth-child(2){
+    animation: menu;
+    animation-timing-function: ease-in-out;
+    animation-duration: 300ms;
+    animation-delay: 150ms;
+    animation-fill-mode: forwards;
+}
+input[type=checkbox]:checked ~ #menu li:nth-child(3){
+    animation: menu;
+    animation-timing-function: ease-in-out;
+    animation-duration: 450ms;
+    animation-delay: 300ms;
+    animation-fill-mode: forwards;
+}
+input[type=checkbox]:checked ~ #menu li:nth-child(4){
+    animation: menu;
+    animation-timing-function: ease-in-out;
+    animation-duration: 600ms;
+    animation-delay: 450ms;
+    animation-fill-mode: forwards;
+}
+input[type=checkbox]:checked ~ #menu li:nth-child(5){
+    animation: menu;
+    animation-timing-function: ease-in-out;
+    animation-duration: 750ms;
+    animation-delay: 600ms;
+    animation-fill-mode: forwards;
+}
+input[type=checkbox]:checked ~ #menu li:nth-child(6){
+    animation: menu;
+    animation-timing-function: ease-in-out;
+    animation-duration: 900ms;
+    animation-delay: 750ms;
+    animation-fill-mode: forwards;
+}
+input[type=checkbox]:checked ~ #menu li:nth-child(7){
+    animation: menu;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1050ms;
+    animation-delay: 900ms;
+    animation-fill-mode: forwards;
+}
+
+}
+
 /* Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
 #menu li{/*display inline*/
@@ -595,9 +664,14 @@ footer{
     position:inherit;
     display:block;
   }
+    #menu li{
+        opacity: 1;
+    }
     .show-menu{
         display: none;
     }
+    
+    
     
     #weather{
   float: right;
