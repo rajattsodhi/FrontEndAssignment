@@ -1,4 +1,4 @@
-/* CSS file for syling components*/
+/* CSS file for syling components  Mobile first*/
 body{
   margin: 0;
   font-family: "open_sans", sans-serif; 
@@ -26,9 +26,7 @@ main > section:nth-of-type(odd) {
 section{
  padding-top: 2%;   
 }
-/*.clear-fix{
-  clear: both;    
-}*/
+
 /*--------- MENU ----------------*/
 
 
@@ -48,10 +46,14 @@ header{
   padding:0;
 }
 
+#menu {/*ul*/
+    position: static;
+    display: none;
+  }
 
-#menu li{/*display inline*/
-  display: inline-block;
-  float: left;
+
+#menu li{
+  
   padding-left: 10px;
   text-transform:uppercase;    
 }
@@ -66,6 +68,10 @@ header{
   font-family: "evogria";     
 }
 
+#menu li,#menu li a {
+    width: 100%;
+  }
+
 #menu li:hover a {/*hovering over link change background color and text color*/
   color: #000;
 }
@@ -75,7 +81,7 @@ header{
     text-align: center;
     background-color: #fff;
     color: #678;
-    display: none;
+    display:block;
     height: 50px;
     line-height: 50px;
     width: 100%;
@@ -95,16 +101,15 @@ input[type=checkbox]:checked ~ #menu{
 }
 
 /* weather*----------------------*/
-#weather{
-  float: right;
-  padding-right: 10px;    
-}
+
+/*position icon next to menu*/    
+  #weather{
+      position: absolute;
+      right: 0;
+      top: 0;
+  }
 #descr{
-    background-color: #fff;
-  color: #678;    
-  height: 50px; 
-  line-height: 50px;
-  font-family: "evogria"; 
+    display: none; 
     
 }
 
@@ -124,20 +129,13 @@ input[type=checkbox]:checked ~ #menu{
 #intro{
     
     height: 100vh;
+    background-image: url(../images/video.jpg);
+        background-size: cover;
+        display: block;
 }
 
 
-#my-video {
-/*  making the video fullscreen  */
-  position: absolute;
-  right: 0; 
-  bottom: 0;
-  min-width: 100%; 
-  min-height: 100%;
-  width: auto; 
-  height: auto;
-  z-index: -100;
-}
+
 
 /*-----LOGO-------*/
 
@@ -148,6 +146,11 @@ input[type=checkbox]:checked ~ #menu{
     z-index: 99;
     width: 100%;
 }
+
+/*do not siplay video but the image instead*/
+    #video{
+        display: none;
+    }
 
 /*-----LOGO END-------*/
 
@@ -561,3 +564,83 @@ footer{
     color: #000;
 }
 
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+    
+    
+    #descr{
+    background-color: #fff;
+  color: #678;    
+  height: 50px; 
+  line-height: 50px;
+  font-family: "evogria";
+        display: inline-block;
+    }
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+#menu li{/*display inline*/
+  
+  padding-left: 10px;
+  display: inline-block;
+  float: left;
+}
+    
+#menu li,#menu li a {
+    width: auto;
+  }
+    
+#menu {/*ul*/
+    position:inherit;
+    display:block;
+  }
+    .show-menu{
+        display: none;
+    }
+    
+    #weather{
+  float: right;
+  padding-right: 10px;    
+}
+   
+    #intro{
+        display: inherit;
+        background: none;
+    }
+    #my-video {
+/*  making the video fullscreen  */
+  position: absolute;
+  right: 0; 
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  width: auto; 
+  height: auto;
+  z-index: -100;
+}
+    #video{display: block};
+
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) { 
+.col-1{ width: 8.33%; }
+.col-2{ width: 16.66%; }
+.col-3{ width: 25%;    }
+.col-4{ width: 33.33%; }
+.col-5{ width: 41.66%; }
+.col-6{ width: 50%;   }
+.col-7{ width: 58.33%;   }
+.col-8{ width: 66.66%;   }
+.col-9{ width: 75%;   }
+.col-10{ width: 83.33%;   }
+.col-11{ width: 91.66%;   }
+.col-12{ width: 100%;   }
+
+
+
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {  }
