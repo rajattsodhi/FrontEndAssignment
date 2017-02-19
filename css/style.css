@@ -255,12 +255,12 @@ text-align: left;
     width: 100%;
 }
 
-.certificate{
+.title{
     color:firebrick;
     margin-top:0; 
 }
 
-.institution{
+.info{
     font-style: italic;
 }
 
@@ -668,6 +668,8 @@ input[type=checkbox]:checked ~ #menu li:nth-child(7){
 
 /* Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
+    
+/*apply float so grid system can work*/    
  .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12{
      
         margin:auto;
@@ -688,11 +690,9 @@ input[type=checkbox]:checked ~ #menu li:nth-child(7){
 .col-11{ width: 91.66%;   }
 .col-12{ width: 100%;   }*/
     
-#education .row{
-        width: 80%;
-        margin: 0 auto;
-    }
-   
+
+
+
     
     
     
@@ -762,6 +762,11 @@ input[type=checkbox]:checked ~ #menu li:nth-child(7){
 .col-10{ width: 83.33%;   }
 .col-11{ width: 91.66%;   }
 .col-12{ width: 100%;   }
+    
+    #education .row, #experience .row{
+        width: 80%;
+        margin: 0 auto;
+    }
 
     
 
