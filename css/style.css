@@ -459,9 +459,7 @@ text-align: left;
     position:relative;
 }
 
-.contact_form li:first-child, .contact_form li:last-child {
-    border-bottom:1px solid #777;
-}
+
 
 .required_notification {
     color:#d45252; 
@@ -480,7 +478,7 @@ text-align: left;
 .contact_form input {
     min-width: 150px;
     height:20px; 
-    width:40%; 
+    width:50%; 
     padding:5px 8px;
 }
 .contact_form textarea {
@@ -489,7 +487,7 @@ text-align: left;
     min-width: 150px;
 }
 .contact_form button {
-    margin-left:20%;
+    margin-left: 40%;
 }
 
 .contact_form input, .contact_form textarea { 
@@ -563,13 +561,37 @@ button.submit:active {
 .contact_form input:required:valid + .form_hint {background: #28921f;} /* change form hint color when valid */
 .contact_form input:required:valid + .form_hint::before {color:#28921f;} /* change form hint arrow color when valid */
 
-    
+/*DOWNLOAD CV*/
 
+#outer-cv{
+ box-shadow: 0 0 3px rgba(0,0,0,0.4);
+   
+}
+#cv a{
+    position: relative;
+    text-decoration: none;
+    color: #678;
+  }
+
+#cv a:hover{
+ color: #000;   
+}
+#cv a:before{
+ position: absolute;
+  font-family: 'FontAwesome';
+  top: -0.8em;
+  left: -0.9em;
+  content: "\f15b";
+    font-size: 3em;
+    
+}
 
 
 /*-------FOOTER--------*/
 footer{
     box-shadow: 0 0 3px rgba(0,0,0,0.4);
+    background-color: #e0e0e0;
+    padding: 2%;
 }
 
 .fa{
@@ -763,7 +785,7 @@ input[type=checkbox]:checked ~ #menu li:nth-child(7){
 .col-11{ width: 91.66%;   }
 .col-12{ width: 100%;   }
     
-    #education .row, #experience .row{
+    #education .row, #experience .row, #contact .row{
         width: 80%;
         margin: 0 auto;
     }
