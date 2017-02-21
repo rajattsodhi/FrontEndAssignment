@@ -38,7 +38,6 @@ for (var i = 0; i < views.length; ++i) {
 //Function triggered on tap 
 mc.on('press tap', function(event) {
         event.preventDefault();
-        console.log(event.target);
         var view = getClosest(event.target, ".view");//get main node
         var img = view.querySelector('img');
         var innerdiv = view.querySelector('.mask');//get inner div(mask)

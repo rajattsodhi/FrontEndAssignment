@@ -1,5 +1,7 @@
-function move() {
-    var mainDiv = getClosest(event.target, "div");
+function move(e) {
+   
+    var mainDiv = getClosest(e.target, "div");
+    var h = mainDiv.querySelector('h3');
     var myProgress = mainDiv.querySelector('.myProgress');
     if (myProgress.currentStyle) {
         var displayStyle = myProgress.currentStyle.display;
@@ -8,32 +10,36 @@ function move() {
         }
     if(displayStyle == 'none'){
         myProgress.style.display="block";
-        var myBar = myProgress.querySelector('.myBar');   
+        var myBar = myProgress.querySelector('.myBar'); 
+        var label = myProgress.querySelector('.label');
+        var value = label.getAttribute("data-value");
         var width = 10;
-        var id = setInterval(frame, 10);
         function frame() {
-            if (width >= 70) {
+            if (width >= value) {
             clearInterval(id);
             } else {
             width++; 
             myBar.style.width = width + '%'; 
-            myProgress.querySelector('.label').innerHTML = width * 1  + '%';
+            label.innerHTML = width * 1  + '%';
             }
         }
+        var id = setInterval(frame, 10);
+        
     }
     else {
         myProgress.style.display="none";
+    
     }
   
 }
 
 var languages = document.getElementsByClassName('language');
-console.log(languages);
 //Add listeners
 for (var i = 0; i < languages.length; i++) {
     var item = languages[i];
-    item.addEventListener("click", function() {
-    move();
+    item.addEventListener("click", function(event,frame) {
+    event.preventDefault();
+    move(event);
     });
 }
 

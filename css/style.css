@@ -173,13 +173,20 @@ input[type=checkbox]:checked ~ #menu{
     
 }
 
+.lang{
+ position: relative;
+}
+
 
 
 
 .myProgress {
   display: none;    
-  width: 100%;
-  background-color: #ddd;
+  width: 98%;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+    left: 12px;
 }
 
 .myBar {
