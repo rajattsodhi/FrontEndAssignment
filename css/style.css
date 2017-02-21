@@ -166,6 +166,7 @@ input[type=checkbox]:checked ~ #menu{
 /*icons*/
   .pr{
     font-size: 4em;
+      cursor: pointer;
   }
 
 #about p{
@@ -192,7 +193,7 @@ input[type=checkbox]:checked ~ #menu{
 .myBar {
   width: 10%;
   height: 30px;
-  background-color: #4CAF50;
+  background-color: #1d7db7;
 }
 
 .label {
@@ -281,6 +282,9 @@ input[type=checkbox]:checked ~ #menu{
 /*--------PORTFOLIO END ----------*/
 /*--------EDUCATION ---------------*/
 
+#education > div:nth-of-type(odd) {
+    border-bottom: solid 4px #fff;
+}
 
 table th{
 text-align: left;
@@ -305,6 +309,15 @@ text-align: left;
 
 
 /*--------EDUCATION END---------------*/
+
+/*---------EXPERIENCE-------------------------*/
+#experience > div:nth-of-type(even) {
+    border-bottom: solid 4px #e0e0e0;
+    border-top: solid 4px #e0e0e0;
+}
+
+/*--------EXPERIENCE END---------------*/
+
 
 /* -------- AWARD and CERTIFICATIONS------*/
 
@@ -537,17 +550,17 @@ text-align: left;
 }
 
 .contact_form button{
-   background-color: #68b12f;
+   background-color: #1d7db7;
    background: linear-gradient(top, #68b12f, #50911e);
-    border: 1px solid #509111;
-    border-bottom: 1px solid #5b992b;
+    border: 1px solid #15496a;
+    border-bottom: 1px solid #15496a;
     border-radius: 3px; 
     box-shadow: inset 0 1px 0 0 #9fd574;
     color: white;
     font-weight: bold;
     padding: 6px 20px;
     text-align: center;
-    text-shadow: 0 -1px 0 #396715;
+    text-shadow: 0 -1px 0 #3da7ea;
 }
 
 button.submit:hover {
@@ -555,8 +568,8 @@ button.submit:hover {
     cursor: pointer; 
 }
 button.submit:active {
-    border: 1px solid #20911e;
-    box-shadow: 0 0 10px 5px #356b0b inset; 
+    border: 1px solid #1176b3;
+    box-shadow: 0 0 10px 5px #15496a inset; 
 }
 
 .contact_form input:focus:invalid, .contact_form textarea:focus:invalid { /* when a field is considered invalid by the browser */

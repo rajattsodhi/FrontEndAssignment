@@ -8,6 +8,7 @@
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"><!-- Font awesome -->
   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css"><!-- programming icons -->
+  <link rel="stylesheet" href="css/dialog-polyfill.css"><!-- dialog polyfill -->
 
   <link rel="stylesheet" href="css/grid.css"> 
   <link rel="stylesheet" href="css/style.css">
@@ -350,8 +351,15 @@
     
       <section id="contact"><!-- // Contact -->
         <h1 class="center">Contact</h1>
+        <dialog id="dialog" class="fixed">
+          <h1>Contact form details</h1>
+          <p id="dialog-text-name"></p>
+          <p id="dialog-text-email"></p>
+          <p id="dialog-text-message"></p>
+          <button id="exit">Exit</button>  
+        </dialog>
         <div class="row">  
-          <form class="contact_form col-9" action="" method="post" name="contact_form">
+          <form class="contact_form col-9"  method="post" name="contact_form" id="contact_form">
             <ul>
               <li>
                 <span class="required_notification">* Denotes Required Field</span>
@@ -370,7 +378,7 @@
                 <textarea name="message" id="message" cols="40" rows="6" required ></textarea>
               </li>
               <li>
-                <button class="submit" type="submit">Submit Form</button>
+                <button class="submit" type="submit" id="btnsubmit">Submit Form</button>
               </li>
             </ul>    
           </form>
@@ -396,6 +404,8 @@
 <script src="js/hammer.min.js"></script>
 <script src="js/touch.js"></script> 
 <script src="js/progress-bar.js"></script> 
+<script src="js/dialog-polyfill.js"></script>
+<script src="js/form.js"></script> 
 
 </body>
 </html>
