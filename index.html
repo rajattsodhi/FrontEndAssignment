@@ -10,17 +10,11 @@
   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css"><!-- programming icons -->
   <link rel="stylesheet" href="css/dialog-polyfill.css"><!-- dialog polyfill -->
 
-  <link rel="stylesheet" href="css/grid.css"> 
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/fonts.css">
-     
-    
+  <link rel="stylesheet" href="css/grid.css"> <!-- grid system -->
+  <link rel="stylesheet" href="css/style.css"><!-- main style, mobile first -->
+  <link rel="stylesheet" href="css/fonts.css"><!-- stylesheet including different font declaration used in the website -->
   
-  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- meta tag used for mobile responsiveness -->
-
-  
-
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- meta tag used totarget viewport of devices -->  
 </head>
 
 <body>
@@ -40,17 +34,17 @@
           <li><a href="#" id="contact-link">Contact</a></li>    
         </ul>
         
-      </nav>
-      <div id="weather">
+      </nav><!--// navigation end -->
+      <div id="weather"><!-- weather containing a decription (Leicester and temperature) and the icon retrieved from OpenWeather  -->
         <span id="descr"></span>
         <label id="icon"></label>  
-      </div>    
-      <div class="clear-fix"></div>
-    </header>
-      <div id="intro">
-        <div id="logo">
+      </div><!--// weather end -->    
+      
+    </header><!--// header end -->
+      <div id="intro"><!-- intro contains a full screen video (or image on smaller screens) and a logo -->
+        <div id="logo"><!-- logo -->
           <img src="images/logo.png" alt="logo">
-        </div> 
+        </div><!--// logo end --> 
         <div id="video">
           <video  autoplay loop id="my-video" poster="images/video.jpg">
             <source src="video/video.mp4" type="video/mp4">
@@ -58,10 +52,10 @@
             <img src="images/video.jpg" alt="image of code">
             Your browser does not support the video tag.
           </video>
-        </div>  
-      </div>      
+        </div><!--// video end -->  
+      </div><!--// intro end -->      
     <main>
-      <section id="about"><!-- // About -->
+      <section id="about"><!-- //about -->
         <h1 class="center">About</h1>
         <p class="center">A hard-working, self-motivated and reliable third year student at De Montfort University with a passion for Technology. Excellent organisational skills gained throughout academic life and as well as from my experience. I am a reliable person who aspires to gain further knowledge and experience in order to pursue a career within Technology. </p>
         <h2 class="center">Languages</h2>
@@ -76,7 +70,7 @@
             </div>  
             
             <h3>PHP</h3>          
-          </div>
+          </div><!-- //col end -->
           <div class="col-4 lang">
             <a class="language"><i class="devicon-java-plain-wordmark pr"></i></a>
             <div class="myProgress">
@@ -85,7 +79,7 @@
               </div>
             </div>
             <h3>Java</h3>          
-          </div>
+          </div><!-- //col end -->
           <div class="col-4 lang">
             <a class="language"><i class="devicon-c-plain colored pr"></i></a>
             <div class="myProgress">
@@ -94,7 +88,7 @@
               </div>
             </div>
             <h3>C</h3>          
-          </div>
+          </div><!-- //col end -->
           <div class="col-4 lang">
             <a class="language"><i class="devicon-html5-plain colored pr"></i></a>
             <div class="myProgress">
@@ -103,7 +97,7 @@
               </div>
             </div>
             <h3>HTML</h3>          
-          </div>
+          </div><!-- //col end -->
           <div class="col-4 lang">
             <a  class="language"><i class="devicon-css3-plain colored pr"></i></a>
             <div class="myProgress">
@@ -112,7 +106,7 @@
               </div>
             </div>
             <h3>CSS</h3>          
-          </div >
+          </div ><!-- //col end -->
           <div class="col-4 lang">
             <a class="language"><i class="devicon-mysql-plain-wordmark coloredk pr"></i></a>
             <div class="myProgress">
@@ -121,9 +115,9 @@
               </div>
             </div>
             <h3>MySQL</h3>          
-          </div>    
-        </div>
-      </section>
+          </div><!-- //col end -->    
+        </div><!-- //row about end -->
+      </section><!-- //about end -->
     
       <section id="portfolio" class="row center"><!-- // Portfolio -->
         <h1>Portfolio</h1>
@@ -134,7 +128,7 @@
             <p>This project was about developing a blocked stack based data structure in C. Further addition implemented was displaying the data structure in the terminal. The obtain the result shown in the previous picture was achieved by using ASCII characters to representate the stack and arrows have been used to show how these blocks are linked. This project was very challenging for the output part and this allowed to show my coding skills.</p>
             
           </div>
-        </div> 
+        </div><!-- //col end --> 
         <div class="view col-4">
           <img src="images/ModuleChooser.png" alt="module chooser project" />
           <div class="mask">
@@ -142,7 +136,7 @@
             <p>This porject was about developing a module chooser for second year students in order to simplify the process of data gathering. This project was an assignment and it did not involved the data storing part on a database, but instead data was saved on a text file locally. This project allowed to develop the undertsanding of JavaFX and to apply the theory learnt from lectures to a real practical piece of work.</p>
             
           </div>
-        </div> 
+        </div><!-- //col end --> 
         <div class="view col-4">
           <img src="images/Terminal.png" alt="terminal text editor project" />
           <div class="mask">
@@ -150,12 +144,12 @@
             <p>This project represent the final year project for the course of Software Engineering at DMU. This project is still under development. The project is about developing a terminal based text editor as there are numerous text editors available for terminals but their user interface is usally not the best for beginners as they require memorizing numerous commands in order to use the editor in its full power.</p>
             
           </div>
-        </div> 
+        </div><!-- //col end --> 
         
         
              
             
-      </section>
+      </section><!-- //portfolio end -->
 
       <section id="education"><!-- // Education -->
         
@@ -164,7 +158,7 @@
           <div class="col-4">
             <h3 class="center title">Bsc(Hons) Software Engineering</h3>
             <h4 class="center info">De Montfort University 2014-17</h4>
-          </div> 
+          </div><!-- //col end --> 
         
           <div class="col-8">
               <table >
@@ -205,15 +199,15 @@
               <td>96/100</td>
             </tr>          
           </table>    
-          </div>
+          </div><!-- //col end -->
           
-        </div>
+        </div><!-- //roe end -->
         
         <div class="row">    
           <div class="col-4">
             <h3 class="center title">Diploma in Accountancy/Computer programming</h3>
             <h4 class="center info">Istituto Istruzione Superiore Giovanni Falcone 2009-14</h4>
-          </div>
+          </div><!-- //col end -->
           <div class="col-8">
             <table >
               <tr>
@@ -225,10 +219,10 @@
                 <td>100/100</td>
               </tr>      
             </table>   
-          </div>
+          </div><!-- //col end -->
           
-        </div>    
-      </section>
+        </div><!-- //row end -->    
+      </section><!-- //education end -->
 
       <section id="experience"><!-- // Experience -->
         <h1 class="center">Experience</h1>
@@ -237,32 +231,32 @@
             <h3 class="center title">IT technician, secretary and treasurer assistant</h3>
             <h4 class="center info">June 2015 - Present</h4>
             <h4 class="center info">Shri Guru Ravidass Temple, Leicester</h4>
-          </div>
+          </div><!-- //col end -->
           <div class="col-8">
             <ul>
               <li>Cash handling and attention to details: receipts/donations registration. </li>
               <li>Communication: helping people filling form/letters and enquires over the phone.</li>
               <li>IT: helping people with queries about technology and maintenance of computer room equipment/software. </li>
             </ul>    
-          </div>  
+          </div><!-- //col end -->  
               
-        </div>
+        </div><!-- //row end -->
         
         <div class="row">
           <div class="col-4">
             <h3 class="center title">Accountant and Project Manager assistant</h3>
             <h4 class="center info">JUNE 2013 - 1 month work experience</h4>
             <h4 class="center info">Golden Lady S.p.A, Italy</h4>
-          </div>
+          </div><!-- //col end -->
           <div class="col-8">
             <ul>
               <li>Paying attention to details by book keeping.  </li>
               <li>Team Working: registering invoices and communicating variations to team members.</li>
               <li>Organisational skills: planning and organizing the dispatch and collection of orders. </li>
             </ul>   
-          </div>  
+          </div><!-- //col end -->  
               
-        </div>
+        </div><!-- //row end -->
         
         
         <div class="row">
@@ -270,37 +264,34 @@
             <h3 class="center title">Accountant and business consultant</h3>
             <h4 class="center info">JUNE 2012 – 1 month work experience</h4>
             <h4 class="center info">Studio Rubes, Italy</h4>
-          </div>
+          </div><!-- //col end -->
           <div class="col-8">
             <ul>
               <li>Communication skills: helping customers in filling forms for injuries and tax credit.   </li>
               <li>Time management: registering customers’ invoices in limited time. </li>
               <li>Positive attitude towards customer service: deal with customers’ enquires ensuring they are satisfied.  </li>
             </ul>   
-          </div>  
+          </div><!-- //col end -->  
               
-        </div>
-          
-        
-        
+        </div><!-- //row end -->    
       
-        
-        
-      
-      </section> 
+      </section> <!-- //experience end -->
     
       <section id="awards"><!-- // Awards -->
         <h1 class="center">Awards &amp; Certifications</h1>
-        <article id="cc-slider">
-          <input checked="checked" name="cc-slider" id="slide1" type="radio">
+        <article id="cc-slider"><!-- //slider -->
+          <input checked="checked" name="cc-slider" id="slide1" type="radio"><!-- checked input are used to slide the slides
+          so there is no need for buttons or javascript as in css it is possible to change some properties (margin)
+          of each slide when the corresponding checkbox is checked -->
           <input name="cc-slider" id="slide2" type="radio">
           <input name="cc-slider" id="slide3" type="radio">
           <input name="cc-slider" id="slide4" type="radio">
           <input name="cc-slider" id="slide5" type="radio">
       
-          <div id="cc-slides">
-            <div id="overflow">
-              <div class="inner">
+          <div id="cc-slides"><!-- //slides -->
+            <div id="overflow"><!-- div used to hide overflow as images have a left margin , this will prevent scroll bars
+             appearing when the margin is greatet than the size of the slider -->
+              <div class="inner"><!-- div that contains all the slides and relative information -->
                 <article>
                   <div class="cctooltip">
                     <h3>Best First Year Student</h3>
@@ -335,38 +326,40 @@
                   </div>
                   <img src="images/slide5.jpg" alt="full uk car driving licence"> 
                 </article>
-              </div>
-            </div>
-          </div>
+              </div><!-- //inner end -->
+            </div><!-- //overflow end -->
+          </div><!-- //slides end -->
       
-          <div id="controls">
+          <div id="controls"><!-- //accessibility, label indicates what each input check is for -->
             <label for="slide1"></label>
             <label for="slide2"></label>
             <label for="slide3"></label>
             <label for="slide4"></label>
             <label for="slide5"></label>
-          </div>
-        </article>    
-      </section> 
+          </div><!-- //controls end -->
+        </article><!-- //slider end -->    
+      </section><!-- //awards end --> 
     
       <section id="contact"><!-- // Contact -->
         <h1 class="center">Contact</h1>
-        <dialog id="dialog" class="fixed">
+        <dialog id="dialog" class="fixed"><!-- //dialog, as dialog is not supported in all browsers a polyfill is used(based on JS) -->
           <h1>Contact form details</h1>
           <p id="dialog-text-name"></p>
           <p id="dialog-text-email"></p>
           <p id="dialog-text-message"></p>
           <button id="exit">Exit</button>  
-        </dialog>
+        </dialog><!-- //dialog end -->
         <div class="row">  
-          <form class="contact_form col-9"  method="post" name="contact_form" id="contact_form">
+          <form class="contact_form col-9"  method="post" name="contact_form" id="contact_form"><!-- form that contains validation before 
+           submission -->
             <ul>
               <li>
                 <span class="required_notification">* Denotes Required Field</span>
               </li>
               <li>
                 <label for="name">Name:</label>
-                <input type="text" name="name" id="name" placeholder="Full name" required />
+                <input type="text" name="name" id="name" placeholder="Full name" required /><!-- required is the most important part
+                to achieve html5 validation -->
               </li>
               <li>
                 <label for="email">Email:</label>
@@ -382,23 +375,26 @@
               </li>
             </ul>    
           </form>
-          <div id="outer-cv" class="center col-3">
+          <div id="outer-cv" class="center col-3"><!-- //div containing the possibility to download CV -->
             
             <div id="cv"  >
               <h3 class="title">CV</h3>
               <a class="download-link" href="files/RajattSodhiCV.pdf" download>Download PDF</a>
-            </div>
-          </div>      
-        </div>
-      </section>    
+            </div><!-- //cv end -->
+          </div><!-- //outer-cv end -->      
+        </div><!-- //row end -->
+      </section><!-- //contact end -->    
     
       
-    </main>
+    </main><!-- //main end -->
     <footer class="center">
       <a href="" ><i class="fa fa-facebook-f"></i></a>
       <a href=""><i class="fa fa-linkedin"></i></a>
-    </footer>  
-  </div> 
+      <p>Copyright &copy Rajatt Sodhi</p>
+    </footer><!-- //footer end -->  
+  </div><!-- //container end --> 
+  
+<!-- //script are placed here so they load after the page has loaded avoiding errors where a particular object is not found -->  
 <script src="js/smoothscrolling.js"></script>
 <script src="js/weather.js"></script> 
 <script src="js/hammer.min.js"></script>
@@ -407,5 +403,5 @@
 <script src="js/dialog-polyfill.js"></script>
 <script src="js/form.js"></script> 
 
-</body>
-</html>
+</body><!-- //body end -->
+</html><!-- //html end -->

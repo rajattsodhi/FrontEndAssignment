@@ -1,6 +1,6 @@
 /*The MIT License (MIT)
 
-Copyright (c) 2016 by Vinzenz Aubry Modified by Rajatt Sodhi
+Copyright (c) 2016 by Vinzenz Aubry 
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -20,66 +20,59 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.*/
 
+/*Javascript used to add touch support allowinf the element to be interacted with as hover is 
+* not supported on touch devices. Hammer.js is used to overcome this problem.
+*/
+
 
 
 // ================Hammer JS Tap Longpress================
+
+//get the views
 var views = document.getElementsByClassName('view');
 //Add Hammer Listener to every view
 for (var i = 0; i < views.length; ++i) {
-    var item = views[i];
-
-    var mc = new Hammer.Manager(item);
-    mc.add( new Hammer.Tap({
-        time: 250,
-    }) );
+  var item = views[i];
+  var mc = new Hammer.Manager(item);
+  mc.add( new Hammer.Tap({
+    time: 250,
+  }) );
     
 
-
-//Function triggered on tap 
-mc.on('press tap', function(event) {
-        event.preventDefault();
-        var view = getClosest(event.target, ".view");//get main node
-        var img = view.querySelector('img');
-        var innerdiv = view.querySelector('.mask');//get inner div(mask)
-        var h =  innerdiv.querySelector('h2');
-        var p = innerdiv.querySelector('p');
+  //Function triggered on tap 
+  mc.on('press tap', function(event) {
+    event.preventDefault();//prevent bubbling effect on the DOM
+    var view = getClosest(event.target, ".view");//get main node
+    var img = view.querySelector('img');//get image
+    var innerdiv = view.querySelector('.mask');//get inner div(mask)
+    var h =  innerdiv.querySelector('h2');//get h
+    var p = innerdiv.querySelector('p');//get p
+  
+    if (event.type == "tap") {//if the event is a tap
+      if(p.style.transform == "scale(1)")//if the description is not scaled (meaning that the user has not clicked on the view)
+      {
+        img.style.transform = "scale(1)";
+        img.style.opacity = 100;
+        h.style.transform= "scale(0)";
+        p.style.transform= "scale(0)";
+      }
+      else//the user has previously clicked so display only the image and hide the descritption of the project
+      {
+        img.style.transform = "scale(10)";
+        img.style.opacity = 0;
+        h.style.transform= "scale(1)";
+        p.style.transform= "scale(1)";
+      }
+    }   
         
-        
-        if (event.type == "tap") {
-            if(p.style.transform == "scale(1)")
-            {
-                img.style.transform = "scale(1)";
-                img.style.opacity = 100;
-                h.style.transform= "scale(0)";
-                p.style.transform= "scale(0)";
-            }
-            else
-            {
-        
-                img.style.transform = "scale(10)";
-                img.style.opacity = 0;
-                h.style.transform= "scale(1)";
-                p.style.transform= "scale(1)";
-            }
-            
-        }   
-        
-    });
+  });
     
 }
 
 
 
 
-                                        // ===== Devics Stuff ==== //
-
-/*//Block the "Tapohold" Context Menu on Android
-window.oncontextmenu = function(event) {
-     event.preventDefault();
-     event.stopPropagation();
-     return false;
-};*/
-
+                                     
 
                                         // ===== Helper Functions ===== //
 

@@ -646,9 +646,14 @@ footer{
 .fa{
     font-size: 1.9em;
     color: #678;
+    padding-right: 2%;
 }
 .fa:hover{
     color: #000;
+}
+
+footer p{
+    display: inline-block;
 }
 
 /* Small devices (landscape phones, 576px and up)*/
