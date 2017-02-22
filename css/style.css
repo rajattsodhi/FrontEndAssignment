@@ -148,6 +148,10 @@ input[type=checkbox]:checked ~ #menu{
     text-align: center;
     z-index: 99;
     width: 100%;
+   
+}
+#logo img{
+     cursor: pointer;
 }
 
 /*do not siplay video but the image instead*/
@@ -183,11 +187,11 @@ input[type=checkbox]:checked ~ #menu{
 
 .myProgress {
   display: none;    
-  width: 98%;
+  width: 95%;
   background-color: #fff;
   position: absolute;
   bottom: 0;
-    left: 12px;
+    left: 2.5%;
 }
 
 .myBar {
@@ -743,7 +747,13 @@ input[type=checkbox]:checked ~ #menu li:nth-child(7){
      float: left;
      width: 50%;
   } 
-
+    
+/*use flexbox for contact form as with floats it is not possible to have same height for the elements*/
+    
+    #contact .row{
+        display: flex;
+        
+    }
 /*.col-1{ width: 8.33%; }
 .col-2{ width: 16.66%; }
 .col-3{ width: 25%;    }
@@ -833,6 +843,10 @@ input[type=checkbox]:checked ~ #menu li:nth-child(7){
     #education .row, #experience .row, #contact .row{
         width: 80%;
         margin: 0 auto;
+    }
+    
+    #logo img:hover{
+        transform: scale(1.2);        
     }
 
     

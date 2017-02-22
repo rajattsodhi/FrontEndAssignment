@@ -64,3 +64,7 @@ document.getElementById("contact-link").onclick = function() {
    var elmnt = document.getElementById("contact");   
    smoothScrollTo(elmnt.offsetTop-50,500);
 }
+document.getElementById("logo").onclick = function() {
+   var elmnt = document.getElementById("about");   
+   smoothScrollTo(elmnt.offsetTop-50,500);
+}
