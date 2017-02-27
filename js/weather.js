@@ -27,7 +27,7 @@
     let iconRetrieved = json["current"]["condition"]["icon"];
     theData+= ' '+ temp +String.fromCharCode(176) +'C';//create the string for the description
     descr.innerHTML = theData;
-    icon.style.backgroundImage = 'url(http:'+iconRetrieved+')';
+    icon.style.backgroundImage = 'url(https:'+iconRetrieved+')';
   }    
  
 
