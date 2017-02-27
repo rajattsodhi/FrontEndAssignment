@@ -1,4 +1,4 @@
-/*GRID for position elements Mobile First */
+/*GRID for positioning elements elements Mobile First */
 
 
 
@@ -14,6 +14,7 @@
   clear:both;
 }
 
+/*define each column*/
 [class*='col-'] {
   box-sizing: border-box;    
   min-height: 1px; 
@@ -22,7 +23,7 @@
   padding: 12px; 
 }
 
-
+/*each column is 100% width on smaller devices*/
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12{/*go full scree*/
       width: 100%;
   }

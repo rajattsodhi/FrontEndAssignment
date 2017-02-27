@@ -415,7 +415,7 @@ In order to slide the slides in the slider checkboxes are used.*/
   transition: all 0.3s ease-out;
 }
 
-.cctooltip h3, cctooltip h4 {
+.cctooltip h3, .cctooltip h4 {
   color: #FFF;
   margin: 0 0 5px;
   font-weight: normal;

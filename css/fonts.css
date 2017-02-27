@@ -1,3 +1,6 @@
+/*stylesheet that downloads custom font that can be then used in style.css*/
+
+
 @font-face {
   font-family: 'evogria';
   src: url('../fonts/evogria/Evogria.otf') format('truetype');
