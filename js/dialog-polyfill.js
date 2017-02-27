@@ -1,3 +1,6 @@
+// Available at https://github.com/GoogleChrome/dialog-polyfill.git
+
+
 (function() {
 
   // nb. This is for IE10 and lower _only_.
