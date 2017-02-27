@@ -49,17 +49,17 @@ for (var i = 0; i < views.length; ++i) {
     var p = innerdiv.querySelector('p');//get p
   
     if (event.type == "tap") {//if the event is a tap
-      if(p.style.transform == "scale(1)")//if the description is not scaled (meaning that the user has not clicked on the view)
+      if(p.style.transform == "scale(1)")//if the description is scaled (meaning that the user has already clicked on the view)
       {
         img.style.transform = "scale(1)";
         img.style.opacity = 100;
         h.style.transform= "scale(0)";
         p.style.transform= "scale(0)";
       }
-      else//the user has previously clicked so display only the image and hide the descritption of the project
+      else//the user has not yet clicked so display the description and title and scale the image to obtain the zooming effect
       {
         img.style.transform = "scale(10)";
-        img.style.opacity = 0;
+        img.style.opacity = 0;//make the image transparent(100%) so description can be read
         h.style.transform= "scale(1)";
         p.style.transform= "scale(1)";
       }

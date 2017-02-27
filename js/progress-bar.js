@@ -45,7 +45,7 @@ function move(e) {
 }
 
 //get each icon
-var languages = document.getElementsByClassName('language');
+var languages = document.getElementsByClassName('pr');
 //Add listeners to each icon
 for (var i = 0; i < languages.length; i++) {
   var item = languages[i];

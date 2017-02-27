@@ -54,7 +54,6 @@ header{
 
 #menu li{
   
-  padding-left: 10px;
   text-transform:uppercase;
     opacity: 0;
 }
@@ -206,9 +205,7 @@ input[type=checkbox]:checked ~ #menu{
   color: white;
 }
 
-.language{
-    text-decoration: none;
-}
+
 
 
 
@@ -646,7 +643,6 @@ footer{
 .fa{
     font-size: 1.9em;
     color: #678;
-    padding-right: 2%;
 }
 .fa:hover{
     color: #000;
@@ -752,6 +748,10 @@ input[type=checkbox]:checked ~ #menu li:nth-child(7){
      float: left;
      width: 50%;
   } 
+    
+    #menu li{
+  
+        padding-left: 10px;}
     
 /*use flexbox for contact form as with floats it is not possible to have same height for the elements*/
     
