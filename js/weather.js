@@ -1,6 +1,6 @@
 /*javascript used to retrieve json data from external API, in this case the API is APIXU API
 * data is retrieved in JSON format, appropriate data is retreived and the description and icon are 
-* update accrodingly to the data retrieved
+* update accordingly to the data retrieved
 */
 
 
