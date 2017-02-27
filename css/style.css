@@ -8,34 +8,36 @@ main{
   width: 100%;
 }
 
-h1, h2, h3{
- font-family: "evogria"; 
-    color: #678;
+h1,h2, h3{
+ font-family: "evogria";/*custom font for headers*/ 
+ color: #678;
     
 }
 
 h2{
- font-family: "evogria-italic";
+ font-family: "evogria-italic";/*italic font for header h2*/
 }
 
+/*select all sections where main is parent and use the nth-of-type attribute to change the background colours for only the odd sections*/
 main > section:nth-of-type(odd) {
-    background: #e0e0e0;
+  background: #e0e0e0;
 }
 
+/*give some padding at the top to separate more the sections*/
 section{
  padding-top: 2%;   
 }
 
 /*--------- MENU ----------------*/
 
-
+/*the header is fixed so it will always stay at the top of the page even when the page is scrolled*/
 header{
   width: 100%;
   background-color: #fff;
   position: fixed;
   top: 0;
   z-index: 100;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.4);/*give some shadow to separate the menu from the sections with the same colour as background*/
 }
 
 
@@ -43,23 +45,19 @@ header{
   list-style-type:none;
   margin:0;
   padding:0;
+  display: none;/*display only when the user clicks on the hamburg icon*/
+  perspective: 1000px;/*used for animating the menu on smaller screens*/
 }
 
-#menu {/*ul*/
-    position: static;
-    display: none;
-    perspective: 1000px;
-  }
 
 
 #menu li{
-  
   text-transform:uppercase;
-    opacity: 0;
+  opacity: 0;/*this is used for the animation so the item is displayed by the animation achieving a crescendo effect*/
 }
 
 #menu li a{
-  display: block;
+  display: block;/*allow each li item to go on a new line*/
   text-decoration: none;
   text-align: center;
   color: #678;    
@@ -69,58 +67,57 @@ header{
 }
 
 #menu li,#menu li a {
-    width: 100%;
+  width: 100%;
   }
 
-#menu li:hover a {/*hovering over link change background color and text color*/
+#menu li:hover a {/*hovering over link change text color*/
   color: #000;
 }
 
 /*hidden show menu, only available on small screens*/
 .show-menu{
-    text-align: center;
-    background-color: #fff;
-    color: #678;
-    display:block;
-    height: 50px;
-    line-height: 50px;
-    width: 100%;
-    text-transform:uppercase;
-    font-family: "evogria";
+  text-align: center;
+  background-color: #fff;
+  color: #678;
+  display:block;
+  height: 50px;
+  line-height: 50px;
+  width: 100%;
+  text-transform:uppercase;
+  font-family: "evogria";
 }
 
 /*hide check box that allow to trigger the menu on small devices*/
 input[type=checkbox]{
-    display: none;
+  display: none;
 }
 
 /*Show menu when checkbox will be checked*/
 input[type=checkbox]:checked ~ #menu{
-    display: block;    
+  display: block;    
 }
 
 
 
 
-/* weather*----------------------*/
+/* WEATHER*----------------------*/
 
 /*position icon next to menu*/    
-  #weather{
-      position: absolute;
-      right: 0;
-      top: 0;
-  }
+#weather{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
 #descr{
-    display: none; 
+  display: none;/*do not display the description*/ 
     
 }
 
-#icon{
-    height: 50px;
-    width: 50px;
-    display: block;
-    float: right;
-   
+#icon{/*icon representig the weather, retrieved from the API*/
+  height: 50px;
+  width: 50px;
+  display: block;
+  float: right;   
 }
 
 /*---------MENU END----------------*/
@@ -129,11 +126,10 @@ input[type=checkbox]:checked ~ #menu{
 
 
 #intro{
-    
-    height: 100vh;
-    background-image: url(../images/video.jpg);
-        background-size: cover;
-        display: block;
+  height: 100vh;/*height will be 100% of the viewport, so 100% of the height on any device*/
+  background-image: url(../images/video.jpg);
+  background-size: cover;/*instead of contain as contain streches the images*/
+  display: block;
 }
 
 
@@ -142,23 +138,22 @@ input[type=checkbox]:checked ~ #menu{
 /*-----LOGO-------*/
 
 #logo{
-        position: absolute;
-    top: 30%;
-    text-align: center;
-    z-index: 99;
-    width: 100%;
-   
+  position: absolute;
+  top: 50%;/*position logo vertically aligned using top 50% and tranlatingY of -50% */
+  transform: translateY(-50%);
+  text-align: center;
+  z-index: 99;
+  width: 100%; 
 }
 #logo img{
-     cursor: pointer;
+  cursor: pointer;
 }
-
-/*do not siplay video but the image instead*/
-    #video{
-        display: none;
-    }
-
 /*-----LOGO END-------*/
+
+/*do not display the video*/
+#video{
+  display: none;
+}
 
 /*--------VIDEO END-------*/
 
@@ -167,18 +162,18 @@ input[type=checkbox]:checked ~ #menu{
 /*-------ABOUT-------*/
 
 /*icons*/
-  .pr{
-    font-size: 4em;
-      cursor: pointer;
-  }
+.pr{
+  font-size: 4em;
+  cursor: pointer;
+}
 
 #about p{
- padding: 0 10%;
+  padding: 0 10%;
     
 }
 
-.lang{
- position: relative;
+.lang{/*container for the progress bar*/ 
+  position: relative;/*necessary so progress bar can be positioned absolutelly in relation to this container*/
 }
 
 
@@ -190,11 +185,10 @@ input[type=checkbox]:checked ~ #menu{
   background-color: #fff;
   position: absolute;
   bottom: 0;
-    left: 2.5%;
+  left: 2.5%;
 }
 
-.myBar {
-  width: 10%;
+.myBar {/*the actual bar*/
   height: 30px;
   background-color: #1d7db7;
 }
@@ -207,9 +201,6 @@ input[type=checkbox]:checked ~ #menu{
 
 
 
-
-
-
 /*-------ABOUT END-------*/
 
 
@@ -217,95 +208,83 @@ input[type=checkbox]:checked ~ #menu{
 /*--------PORTFOLIO ----------*/
 
     
-
+/*view, elemnt that when hovered (clicked on touch devices) create a zooming effect on the image and then display
+the description using animations*/
 
 .view {
-    overflow: hidden;
-   position: relative;
-    
-   
-   
-  }
+  overflow: hidden;/*hide content if it overflows the this box*/
+  position: relative;   
+}
+
 .view .mask,.view .content {
-   position: absolute;
-   overflow: hidden;
-   top: 50%;
-   transform: translateY(-50%); 
+  position: absolute;
+  overflow: hidden;
+  top: 50%;/*vertical alignment*/
+  transform: translateY(-50%); 
 	 
 	
 }
 .view img {
-    width: 100%;
-   display: block;
-   position: relative;
-   transition: all 0.7s ease-in-out;
-   box-shadow: 1px 1px 2px #000;
+  width: 100%;
+  display: block;
+  position: relative;
+  transition: all 0.7s ease-in-out;
+  box-shadow: 1px 1px 2px #000;
 }
 .view h2 {
-   text-align: center;
-   position: relative;
-   padding: 10px;
-   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-   background: transparent;
-   margin: 20px 40px 0px 40px;
-   transform: scale(0);
-   color: #333;
-   transition: all 0.5s linear;
+  text-align: center;
+  position: relative;
+  padding: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  margin: 20px 40px 0px 40px;
+  transform: scale(0);/*initially scale to 0, ie element will not be shown. Display none cannot be used as the animation is based on scaling*/
+  color: #333;
+  transition: all 0.5s linear;
 }
 .view p {
-   font-family: Georgia, serif;
-   font-style: italic;
-   position: relative;
-   padding: 10px 20px 20px;
-   text-align: center;
-   color: #333;
-   transform: scale(0);
-   transition: all 0.5s linear;
+  font-family: Georgia, serif;
+  font-style: italic;
+  position: relative;
+  padding: 10px 20px 20px;
+  text-align: center;
+  color: #333;
+  transform: scale(0);
+  transition: all 0.5s linear;
 }
 
-
-
-
-
 .view:hover img {
-   transform: scale(10);
-    opacity: 0;
-   
+  transform: scale(10);/*create the zooming effect*/
+  opacity: 0;/*make the image transparent so description can be seen*/
 }
 
 .view:hover h2,.view:hover p {
-   transform: scale(1);
-   
+  transform: scale(1);/*display the description*/ 
 }
 
-/*******************************/
 
 /*--------PORTFOLIO END ----------*/
+
+
 /*--------EDUCATION ---------------*/
 
+/*add bottom border to separate each div in order to improve information architecture */
 #education > div:nth-of-type(odd) {
-    border-bottom: solid 4px #fff;
+  border-bottom: solid 4px #fff;
 }
 
 table th{
-text-align: left;
-    width: 100%;
+ text-align: left;/*table headers, align text on the left*/
+ width: 100%;
 }
 
 .title{
-    color:firebrick;
-    margin-top:0; 
+  color:#933;
+  margin-top:0; 
 }
 
 .info{
-    font-style: italic;
+  font-style: italic;
 }
-
-
-
-
-
-
 
 
 
@@ -313,8 +292,8 @@ text-align: left;
 
 /*---------EXPERIENCE-------------------------*/
 #experience > div:nth-of-type(even) {
-    border-bottom: solid 4px #e0e0e0;
-    border-top: solid 4px #e0e0e0;
+  border-bottom: solid 4px #e0e0e0;
+  border-top: solid 4px #e0e0e0;
 }
 
 /*--------EXPERIENCE END---------------*/
@@ -322,27 +301,27 @@ text-align: left;
 
 /* -------- AWARD and CERTIFICATIONS------*/
 
+/*slider that works by giving to each slide a negative margin (animation on the margin left) so the effect of sliding
+is achieved. Overflow hidden is necessary as by giving negative margins that are greater than 100% make the slides to overflow.
+In order to slide the slides in the slider checkboxes are used.*/
 #awards{
-    padding-bottom: 5%;
+  padding-bottom: 5%;
 }
 #cc-slider {
-	text-align: center;
-	margin: 0 auto;
-	max-width: 850px;
-    position: relative;
-}
-#cc-slider input {
-	display: none;
-}
-#cc-slider label,#cc-slider a {
-	color: #ef023f;
-	cursor: pointer;
-	text-decoration: none;
-}
-#cc-slider label:hover {
-	color: #ff0042 !important;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 850px;
+  position: relative;
 }
 
+#cc-slider input {
+  display: none;/*hide the cheboxes*/
+}
+#cc-slider label{
+  cursor: pointer;
+}
+
+/*bind to each checkbox its checked behaviour ie what happens to the margin left of the slide when the checkbox is checked*/
 #slide1:checked ~ #cc-slides .inner { margin-left:0; }
 #slide2:checked ~ #cc-slides .inner { margin-left:-100%; }
 #slide3:checked ~ #cc-slides .inner { margin-left:-200%; }
@@ -351,189 +330,179 @@ text-align: left;
 
 
 #overflow {
-	width: 100%;
-	overflow: hidden;
-    
+  width: 100%;
+  overflow: hidden;/*hide overflowing slides*/
 }
+
 #cc-slides article img {
-	width: 100%;
+  width: 100%;/*make the image 100% width, this is possible as image is inside an article(ie image element can be given width in relation
+  to the parent container)*/
 }
+/*each slide*/
 #cc-slides{
-    position: relative;
+  position: relative;/*necessary to allow positioning of the controls and the description(cc-tooltip)*/
 }
 #cc-slides .inner {
-	width: 500%;
-	line-height: 0;
+  width: 500%;/*as there are 5 slides*/
+  line-height: 0;
     
 }
 #cc-slides article {
-	width: 20%;
-	float: left;
+  width: 20%;/*each slide is 100/5 = 20 */
+  float: left;
 }
 
+/*position controls on the bottom right corner*/
 #controls {
-    height: 50px;
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
+  height: 50px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
 }
 #controls label {
-    display: none;
-    width: 50px;
-    height: 50px;
-    margin: 0 5px;
+ display: none;/*display none for the labels, as the checked box binding will display the relevant labels. For example id slide
+    number one is displayed currently then one label will be for slide 5 and one label for slide number 2*/
+ width: 50px;
+ height: 50px;
+ margin: 0 5px;
 }
+
+/*give some hoovering effects on the labels*/
 #controls label:hover {
-	opacity: 0.8;
+  opacity: 0.8;
 }
+
+/*display the correct pair of labels based on wich checkbox is checked, displaying left to right sliding*/
 #slide1:checked ~ #controls label:nth-child(2), 
 #slide2:checked ~ #controls label:nth-child(3), 
 #slide3:checked ~ #controls label:nth-child(4), 
 #slide4:checked ~ #controls label:nth-child(5), 
 #slide5:checked ~ #controls label:nth-child(1) {
-	background: url('../images/next.png');
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: right;
-	float: right;
-	display: block;
-	
+  background: url('../images/next.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  float: right;
+  display: block;	
 }
 
-
+/*display the correct pair of labels based on wich checkbox is checked, displaying right to left sliding*/
 #slide1:checked ~ #controls label:nth-child(5),
 #slide2:checked ~ #controls label:nth-child(1),
 #slide3:checked ~ #controls label:nth-child(2),
 #slide4:checked ~ #controls label:nth-child(3),
 #slide5:checked ~ #controls label:nth-child(4) {
-	background: url('../images/previous.png');
-	background-size: contain;
-        background-repeat: no-repeat;
-        background-position: right;
-	float: left;
-	display: block;
-	
+  background: url('../images/previous.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  float: left;
+  display: block;	
 }
 
 
 
-/* cctooltip Box */
+/* cctooltip Box, ie description message */
 .cctooltip {
-    color: #FFFFFF;
-    font-style: italic;
-    line-height: 20px;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    position: absolute;
-    text-align: left;
-	transition: all 0.3s ease-out;
+  color: #FFF;
+  font-style: italic;
+  line-height: 20px;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  text-align: left;
+  transition: all 0.3s ease-out;
 }
 
-.cctooltip h3 {
-	color: #FFFFFF;
-	margin: 0 0 5px;
-	font-weight: normal;
-	font-size: 16px;
-	font-style: normal;
-	background: none repeat scroll 0 0 #222222;
-	padding: 5px;
+.cctooltip h3, cctooltip h4 {
+  color: #FFF;
+  margin: 0 0 5px;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  background: #222;
+  padding: 5px;
 }
 .cctooltip h4 {
-	color: #FFFFFF;
-	margin: 0 0 5px;
-	font-weight: normal;
-	font-size: 14px;
-	font-style: normal;
-	background: none repeat scroll 0 0 #222222;
-	padding: 5px;
-	text-align:right;
-	width:106px;
+  font-size: 14px;
+  text-align:right;
+  width:106px;
 }
-
-
-
-/* cc-slider Styling */
 
 #cc-slides {
-	margin: 45px 0 0;
-	padding: 1%;
-	background: #fff;
+  margin: 45px 0 0;
+  padding: 1%;
+  background: #fff;
 }
 
 
-/* Animation */
-#cc-slides .inner {
-	 
-        transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); /* easeInOutQuart */
-	
-}
-#cc-slider {
-	transition: all 0.5s ease-out;
+/* Animations  */
+#cc-slides .inner {/*animation that creates the sliding effect*/
+  transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); /* easeInOutQuart */	
 }
 
-#controls label{
-	transition: opacity 0.2s ease-out;
-}
-
+/*animation for the cctooltip (ie description)*/
 #slide1:checked ~ #cc-slides article:nth-child(1) .cctooltip,
 #slide2:checked ~ #cc-slides article:nth-child(2) .cctooltip,
 #slide3:checked ~ #cc-slides article:nth-child(3) .cctooltip,
 #slide4:checked ~ #cc-slides article:nth-child(4) .cctooltip,
 #slide5:checked ~ #cc-slides article:nth-child(5) .cctooltip {
-	opacity: 1;
-	transition: all 1s ease-out 0.6s;
+  opacity: 1;
+  transition: all 1s ease-out 0.6s;
 }
+
+
 /* -------- AWARD and CERTIFICATIONS END --------*/
 
 
+
 /* -------- CONTACT ------------------------------*/
-/*remove default outline style*/
+/*remove default outline style, so custom outline can be applied*/
 *:focus {
-    outline: none;
+  outline: none;
 }
 
 /*remove list style*/
 .contact_form ul {
-    list-style-type:none;
-    margin:0px;
-    padding:0px;
+  list-style-type:none;
+  margin:0px;
+  padding:0px;
 }
 .contact_form li{
-    padding:12px; 
-    border-bottom:1px solid #eee;
-    position:relative;
+  padding:12px; 
+  border-bottom:1px solid #eee;
+  position:relative;
 }
 
-
-
+/*required message styiling*/
 .required_notification {
-    color:#d45252; 
-    margin:5px 0 0 0; 
-    display:inline;
+  color:#d45252; 
+  margin:5px 0 0 0; 
+  display:inline;
 }
 
 .contact_form label {
-    width:20%;
-    min-width: 100px;
-    margin-top: 3px;
-    display:inline-block;
-    float:left;
-    padding:3px;
+  width:20%;
+  min-width: 100px;
+  margin-top: 3px;
+  display:inline-block;
+  float:left;
+  padding:3px;
 }
 .contact_form input {
-    min-width: 150px;
-    height:20px; 
-    width:50%; 
-    padding:5px 8px;
+  min-width: 150px;
+  height:20px; 
+  width:50%; 
+  padding:5px 8px;
 }
 .contact_form textarea {
-    padding:8px;
-    width:50%;
-    min-width: 150px;
+  padding:8px;
+  width:50%;
+  min-width: 150px;
 }
 .contact_form button {
-    margin-left: 40%;
+  margin-left: 40%;
 }
 
 .contact_form input, .contact_form textarea { 
@@ -547,30 +516,24 @@ text-align: left;
     border:1px solid #555; 
     box-shadow: 0 0 3px #aaa; 
     padding-right:5%;
-    transition: padding .25s;
+    transition: padding 0.25s;/*increase width when input is focused*/
 }
 
 .contact_form button{
    background-color: #1d7db7;
-   background: linear-gradient(top, #68b12f, #50911e);
-    border: 1px solid #15496a;
-    border-bottom: 1px solid #15496a;
-    border-radius: 3px; 
-    box-shadow: inset 0 1px 0 0 #9fd574;
-    color: white;
-    font-weight: bold;
-    padding: 6px 20px;
-    text-align: center;
-    text-shadow: 0 -1px 0 #3da7ea;
+   border: 1px solid #15496a;
+   border-bottom: 1px solid #15496a;
+   border-radius: 3px; 
+   box-shadow: inset 0 1px 0 0 #9fd574;
+   color: white;
+   font-weight: bold;
+   padding: 6px 20px;
+   text-align: center;
 }
 
 button.submit:hover {
-    opacity:.85;
+    opacity:0.85;
     cursor: pointer; 
-}
-button.submit:active {
-    border: 1px solid #1176b3;
-    box-shadow: 0 0 10px 5px #15496a inset; 
 }
 
 .contact_form input:focus:invalid, .contact_form textarea:focus:invalid { /* when a field is considered invalid by the browser */
@@ -589,23 +552,26 @@ button.submit:active {
     background: #d45252;
     border-radius: 3px 3px 3px 3px;
     color: white;
-    margin-left:8px;
+    left:12px;
+    top:-12px;
     padding: 1px 6px;
-    z-index: 999; /* hints stay above all other elements */
-    /*position: absolute; *//* allows proper formatting if hint is two lines */
-    display: none;
+    z-index: 101; 
+    position: absolute; 
+    display: none;/*display only when the element is focused*/
 }
 
-.form_hint::before {
-    color:#d45252;
-    position: absolute;
-    top:1px;
-    left:-6px;
+
+/*display hints, + allows to display only the immediate element after input
+focus so the correct hint is displayed*/
+.contact_form input:focus + .form_hint {
+  display: block
 }
 
-.contact_form input:focus + .form_hint {display: inline;}
-.contact_form input:required:valid + .form_hint {background: #28921f;} /* change form hint color when valid */
-.contact_form input:required:valid + .form_hint::before {color:#28921f;} /* change form hint arrow color when valid */
+/* change form hint color when valid */
+.contact_form input:required:valid + .form_hint {
+  background: #28921f;
+} 
+
 
 /*DOWNLOAD CV*/
 
@@ -614,250 +580,213 @@ button.submit:active {
    
 }
 #cv a{
-    position: relative;
-    text-decoration: none;
-    color: #678;
-  }
+  position: relative;
+  text-decoration: none;
+  color: #678;
+}
 
 #cv a:hover{
  color: #000;   
 }
+
+/*adding fontawesome as background */
 #cv a:before{
  position: absolute;
-  font-family: 'FontAwesome';
-  top: -0.8em;
-  left: -0.9em;
-  content: "\f15b";
-    font-size: 3em;
-    
+ font-family: 'FontAwesome';
+ top: -0.8em;
+ left: -0.9em;
+ content: "\f15b";
+ font-size: 3em;   
 }
 
 
 /*-------FOOTER--------*/
 footer{
-    box-shadow: 0 0 3px rgba(0,0,0,0.4);
-    background-color: #e0e0e0;
-    padding: 2%;
+  box-shadow: 0 0 3px rgba(0,0,0,0.4);
+  background-color: #e0e0e0;
+  padding: 2%;
 }
 
-.fa{
-    font-size: 1.9em;
-    color: #678;
+.fa{/*fontawesome icons */
+  font-size: 1.9em;
+  color: #678;
 }
 .fa:hover{
-    color: #000;
+  color: #000;
 }
 
-footer p{
-    display: inline-block;
+footer p{/*Copyright message*/
+  display: inline-block;
 }
 
-/* Small devices (landscape phones, 576px and up)*/
+/*Media queries*/
+
+/* Small devices (landscape phones, 576px and up)   ***********************  ********************** ****************/
 @media (min-width: 576px) {
-    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12{
-      width: 80%;
-      margin: 0 auto;
+  .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12{
+    width: 80%;
+    margin: 0 auto;
   }
     
     
-    #descr{
+  #descr{
     background-color: #fff;
-  color: #678;    
-  height: 50px; 
-  line-height: 50px;
-  font-family: "evogria";
-        display: inline-block;
-    }
-}
+    color: #678;    
+    height: 50px; 
+    line-height: 50px;
+    font-family: "evogria";
+    display: inline-block;
+  }
 
-/*media query only for the animations on mobile phone vertical menu*/
+}/*//End 576px Media Query*/
+
+/*media query only for the animations on mobile phone vertical menu****************  *********************** *****/
 @media (max-width: 768px) {
     /*animation for the vertical menu*/
-@keyframes menu{
-    0% {
+  @keyframes menu{
+    0%{
         opacity: 0;
         transform: rotateY(-90deg) translate(30px);    
     }
-    50%{opacity: 0.5;}
-    100% {
+    50%{
+        opacity: 0.5;
+    }
+    100%{
         opacity: 1;
         transform: rotateY(0deg) translate(0px);
     }
-}
+  }/*//KeyFrames End*/
 
-/*animate single li*/
-input[type=checkbox]:checked ~ #menu li:nth-child(1){
+  /*animate single li's*/
+  input[type=checkbox]:checked ~ #menu li{
     animation: menu;
     animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;    
+  }  
+  input[type=checkbox]:checked ~ #menu li:nth-child(1){
     animation-duration: 150ms;
     animation-delay: 0ms;
-    animation-fill-mode: forwards;
-}
-input[type=checkbox]:checked ~ #menu li:nth-child(2){
-    animation: menu;
-    animation-timing-function: ease-in-out;
+  }
+  input[type=checkbox]:checked ~ #menu li:nth-child(2){
     animation-duration: 300ms;
     animation-delay: 150ms;
-    animation-fill-mode: forwards;
-}
-input[type=checkbox]:checked ~ #menu li:nth-child(3){
-    animation: menu;
-    animation-timing-function: ease-in-out;
+  }
+  input[type=checkbox]:checked ~ #menu li:nth-child(3){
     animation-duration: 450ms;
     animation-delay: 300ms;
-    animation-fill-mode: forwards;
-}
-input[type=checkbox]:checked ~ #menu li:nth-child(4){
-    animation: menu;
-    animation-timing-function: ease-in-out;
+  }
+  input[type=checkbox]:checked ~ #menu li:nth-child(4){
     animation-duration: 600ms;
     animation-delay: 450ms;
-    animation-fill-mode: forwards;
-}
-input[type=checkbox]:checked ~ #menu li:nth-child(5){
-    animation: menu;
-    animation-timing-function: ease-in-out;
+  }
+  input[type=checkbox]:checked ~ #menu li:nth-child(5){
     animation-duration: 750ms;
     animation-delay: 600ms;
-    animation-fill-mode: forwards;
-}
-input[type=checkbox]:checked ~ #menu li:nth-child(6){
-    animation: menu;
-    animation-timing-function: ease-in-out;
+  }
+  input[type=checkbox]:checked ~ #menu li:nth-child(6){
     animation-duration: 900ms;
-    animation-delay: 750ms;
-    animation-fill-mode: forwards;
-}
-input[type=checkbox]:checked ~ #menu li:nth-child(7){
-    animation: menu;
-    animation-timing-function: ease-in-out;
+    animation-delay: 750ms
+  }
+  input[type=checkbox]:checked ~ #menu li:nth-child(7){
     animation-duration: 1050ms;
     animation-delay: 900ms;
-    animation-fill-mode: forwards;
-}
+  }
 
-}
+}/*//End Max 768px Media Query*/
 
-/* Medium devices (tablets, 768px and up)*/
+/* Medium devices (tablets, 768px and up)************************** ******************* ************************/
 @media (min-width: 768px) {
     
-/*apply float so grid system can work*/    
- .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12{
-     
-        margin:auto;
-     float: left;
-     width: 50%;
+  /*apply float so grid system can work*/    
+  .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12{   
+    margin:auto;
+    float: left;
+    width: 50%;
   } 
     
-    #menu li{
-  
-        padding-left: 10px;}
-    
-/*use flexbox for contact form as with floats it is not possible to have same height for the elements*/
-    
-    #contact .row{
-        display: flex;
-        
-    }
-/*.col-1{ width: 8.33%; }
-.col-2{ width: 16.66%; }
-.col-3{ width: 25%;    }
-.col-4{ width: 33.33%; }
-.col-5{ width: 41.66%; }
-.col-6{ width: 50%;   }
-.col-7{ width: 58.33%;   }
-.col-8{ width: 66.66%;   }
-.col-9{ width: 75%;   }
-.col-10{ width: 83.33%;   }
-.col-11{ width: 91.66%;   }
-.col-12{ width: 100%;   }*/
-    
-
-
-
-    
-    
-    
-   
-#menu li{/*display inline*/
-  
-  padding-left: 10px;
-  display: inline-block;
-  float: left;
-}
-    
-#menu li,#menu li a {
-    width: auto;
+  #menu li{/*add padding to menu li item so they can be separated (some space between each menu item)*/
+    padding-left: 10px;
   }
     
-#menu {/*ul*/
-    position:inherit;
+  /*use flexbox for contact form as with floats it is not possible to have same height for the elements*/ 
+  #contact .row{
+    display: flex;
+  }
+   
+  #menu li{/*display inline-block and float left so each menu item can be placed on the same line orizontally*/
+    padding-left: 10px;
+    display: inline-block;
+    float: left;
+  }
+    
+  #menu li,#menu li a {
+    width: auto;/*remove 100% width*/
+  }
+    
+  #menu {/*ul*/
     display:block;
   }
-    #menu li{
-        opacity: 1;
-    }
-    .show-menu{
-        display: none;
-    }
-    
-    
-    
-    #weather{
-  float: right;
-  padding-right: 10px;    
-}
+  #menu li{/*no animatio for menu on medium/large screens so make each menu item visible*/
+    opacity: 1;
+  }
+  .show-menu{/*hide hamburg sign*/
+    display: none;
+  }
+      
+  #weather{
+    float: right;
+    padding-right: 10px;    
+  }
    
-    #intro{
-        display: inherit;
-        background: none;
-    }
-    #my-video {
-/*  making the video fullscreen  */
-  position: absolute;
-  right: 0; 
-  bottom: 0;
-  min-width: 100%; 
-  min-height: 100%;
-  width: auto; 
-  height: auto;
-  z-index: -100;
-}
-    #video{display: block};
-    
-    
+  #intro{
+    background: none;/*remove image from background*/
+  }
+  #my-video {
+    /*  making the video fullscreen  */
+    position: absolute;
+    right: 0;/*because video is force to be 100% as height the video becomes wider tha 100% of width so it is positioned
+      absolutely in relation to the bottom right corner. Another approach is to make the video not to mantain its ratio
+      but this causes the video being stretched loosing quality*/ 
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto; 
+    height: auto;
+    z-index: 98;
+  }
+  #video{
+    display: block;
+  }
 
-}
+}/*//End 768px Media Query*/
 
-/* Large devices (desktops, 992px and up)*/
+/* Large devices (desktops, 992px and up)**************************** ******************** **************************/
 @media (min-width: 992px) { 
     
-.col-1{ width: 8.33%; }
-.col-2{ width: 16.66%; }
-.col-3{ width: 25%;    }
-.col-4{ width: 33.33%; }
-.col-5{ width: 41.66%; }
-.col-6{ width: 50%;   }
-.col-7{ width: 58.33%;   }
-.col-8{ width: 66.66%;   }
-.col-9{ width: 75%;   }
-.col-10{ width: 83.33%;   }
-.col-11{ width: 91.66%;   }
-.col-12{ width: 100%;   }
-    
-    #education .row, #experience .row, #contact .row{
-        width: 80%;
-        margin: 0 auto;
-    }
-    
-    #logo img:hover{
-        transform: scale(1.2);        
-    }
+  .col-1{ width: 8.33%; }
+  .col-2{ width: 16.66%; }
+  .col-3{ width: 25%;    }
+  .col-4{ width: 33.33%; }
+  .col-5{ width: 41.66%; }
+  .col-6{ width: 50%;   }
+  .col-7{ width: 58.33%;   }
+  .col-8{ width: 66.66%;   }
+  .col-9{ width: 75%;   }
+  .col-10{ width: 83.33%;   }
+  .col-11{ width: 91.66%;   }
+  .col-12{ width: 100%;   }
+  /*reduction of the width to avoid long lines*/  
+  #education .row, #experience .row, #contact .row{
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  /*add zooming effect on logo for large screens*/
+  #logo img:hover{
+    transform: scale(1.2);        
+  }
 
-    
+}/*//End Max 992px Media Query*/
 
-
-}
-
-/* Extra large devices (large desktops, 1200px and up)*/
+/* Extra large devices (large desktops, 1200px and up)******************* ***************************** ***********/
 @media (min-width: 1200px) {  }

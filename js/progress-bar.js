@@ -32,7 +32,7 @@ function move(e) {
       } else {
           width++; 
           myBar.style.width = width + '%'; 
-          label.innerHTML = width * 1  + '%';
+          label.innerHTML = width  + '%';
         }
     }
         var id = setInterval(frame, 10);//interval at wich the frame function is called (10).
