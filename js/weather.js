@@ -1,33 +1,35 @@
-/*javascript used to retrieve json data from external API, in this case the API is OpenWeather API
+/*javascript used to retrieve json data from external API, in this case the API is APIXU API
 * data is retrieved in JSON format, appropriate data is retreived and the description and icon are 
 * update accrodingly to the data retrieved
 */
 
-/*NB if page is displayed on GitHub then an error of mixed content will be displayed in the console
-* this is due to the fact the page is displayed over https and the call to the api is made on http.
-* In oder to solve the problem the call should be made using https but in order to use this 
-* functionality a separate licence needs to be purchased
-*/
-//function to get json data from the wheather api by callback function
-function processJSON (json) {
-  let demoJSON = document.getElementById("descr");
-  let icon = document.getElementById("icon");
-  let theData= json["name"];
-  let temp = Math.round(json["main"]["temp"]);
-  let iconRetrieved = json["weather"][0]["icon"];
-  theData+= ' '+ temp +String.fromCharCode(176) +'C';
-  demoJSON.innerHTML = theData;
-  icon.style.backgroundImage = 'url(images/'+iconRetrieved+'.png)';
-  
-};
 
-// Create a new script element
-let script_element = document.createElement('script');
+/*NEW VERSION THAT USES HTTPS AVOIDING MIXED CONTENT ERROR*/
+(function(){
 
-/* Set the source of the script tot the call to the API by providing the cordinates of Leicester and the callback function
-* (processJSON) so data can be retrived
-*/
-script_element.src = 'http://api.openweathermap.org/data/2.5/weather?lat=52.638599&lon=-1.13169&callback=processJSON&units=metric&APPID=0def49e863318873e0c926d3af2b07ce';
+  let xmlhttp = new XMLHttpRequest();//object use to send a https request
+  let url = "https://api.apixu.com/v1/current.json?key=0e227a1f5beb452d9bf210027172702&q=Leicester";
 
-// put the script in the head so the call can be made to the API when page loads
-document.getElementsByTagName('head')[0].appendChild(script_element);
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState === 4 && this.status === 200) {
+      let json = JSON.parse(this.response);//get the response of the request
+      extractData(json);//call to a function that extracts data from json and updates the weather widget    
+    }
+  };
+  xmlhttp.open("GET", url, true);
+  xmlhttp.send();
+
+  function extractData(json){
+    let descr = document.getElementById("descr");
+    let icon = document.getElementById("icon");
+    let theData= json["location"]["name"];
+    let temp = Math.round(json["current"]["temp_c"]);//display the temperature as integer so round function is used
+    let iconRetrieved = json["current"]["condition"]["icon"];
+    theData+= ' '+ temp +String.fromCharCode(176) +'C';//create the string for the description
+    descr.innerHTML = theData;
+    icon.style.backgroundImage = 'url(http:'+iconRetrieved+')';
+  }    
+ 
+
+}());
+

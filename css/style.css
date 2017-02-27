@@ -117,7 +117,8 @@ input[type=checkbox]:checked ~ #menu{
   height: 50px;
   width: 50px;
   display: block;
-  float: right;   
+  float: right; 
+  background-size: contain;    
 }
 
 /*---------MENU END----------------*/
