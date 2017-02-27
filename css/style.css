@@ -172,6 +172,10 @@ input[type=checkbox]:checked ~ #menu{
     
 }
 
+#about h3{
+  color: #222;    
+}
+
 .lang{/*container for the progress bar*/ 
   position: relative;/*necessary so progress bar can be positioned absolutelly in relation to this container*/
 }
@@ -477,7 +481,7 @@ In order to slide the slides in the slider checkboxes are used.*/
 
 /*required message styiling*/
 .required_notification {
-  color:#d45252; 
+  color:#a52828; 
   margin:5px 0 0 0; 
   display:inline;
 }
@@ -520,11 +524,10 @@ In order to slide the slides in the slider checkboxes are used.*/
 }
 
 .contact_form button{
-   background-color: #1d7db7;
-   border: 1px solid #15496a;
-   border-bottom: 1px solid #15496a;
+   background-color: #1d5374;
+   border: 1px solid #1d7db7;
+   border-bottom: 1px solid #1d7db7;
    border-radius: 3px; 
-   box-shadow: inset 0 1px 0 0 #9fd574;
    color: white;
    font-weight: bold;
    padding: 6px 20px;

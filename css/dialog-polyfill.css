@@ -40,17 +40,14 @@ dialog.fixed {
 }
 
 #exit{
-  background-color: #1d7db7;
-  background: linear-gradient(top, #68b12f, #50911e);
-  border: 1px solid #15496a;
-  border-bottom: 1px solid #15496a;
+  background-color: #1d5374;
+  border: 1px solid #1d7db7;
+  border-bottom: 1px solid #1d7db7;
   border-radius: 3px; 
-  box-shadow: inset 0 1px 0 0 #9fd574;
   color: white;
   font-weight: bold;
   padding: 6px 20px;
   text-align: center;
-  text-shadow: 0 -1px 0 #3da7ea;
 }
 
 #exit:hover {
