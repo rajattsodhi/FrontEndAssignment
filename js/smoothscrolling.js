@@ -1,4 +1,4 @@
-/*javascript that allow to scroll to a particular section of the page by simulating the 
+/*javascript that allows to scroll to a particular section of the page by simulating the 
 * smoothscrolling. This is achieved by calculating the distance between the current element
 * and the target event, then using timing event the scroll position is constantly updated until
 * the target element position is equal to the scroll position
@@ -8,7 +8,7 @@
 * code modified by removing unnecessary parts
 */
 
-/*function that take as paramete the target element and a duration (how long the animatio should take)
+/*function that take as parameters the target element and a duration (how long the animation should take)
 */
 smoothScrollTo = function (target, duration) {
   var timer;//used to use timer event 
