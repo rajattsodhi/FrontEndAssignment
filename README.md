@@ -58,7 +58,12 @@ After looking the behaviour of the users while trying to use the website and fin
 
 ## Accessibility 
 
-Accessibilty has been tested using wave.webaim online tool. There were problems related to the contrast between colours of the button used in the submission of the form.
+Accessibilty has been tested using wave.webaim online tool. There were problems related to the contrast between colours of the button used in the submission of the form. Additionally in the form the for attribute has been added in order to make the website accessible from screen readers.
+
+```html
+<label for="name">Name:</label>
+<input type="text" name="name" id="name" placeholder="Full name" required />
+```
 
 ### Incorrect contrast
 ![alt incorrect contrast](images/btn0.jpg)
