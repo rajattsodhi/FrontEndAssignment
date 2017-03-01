@@ -1,6 +1,6 @@
 # FrontEndAssignment
 
-This is a brief document that indicates shows the process of the development on a website using HTML5, CSS and Javascript. 
+This is a brief document that shows the process of the development on a website using HTML5, CSS and Javascript and the conssideration of relevant aspects/techniques. 
 
 ## Type of website
 
@@ -52,4 +52,16 @@ After looking the behaviour of real users it was clear that the section of educa
 
 ![alt IA](/images/IA.jpg)
 
+## Usability
 
+After looking the behaviour of the users while trying to use the website and find the relevant information they needed, the majority of the users clicked on the logo expecting to see more content or expecting an event to occur. This is why the onclick event has been added to the logo so when the users click on the logo the website scrolls to the about section.
+
+## Accessibility 
+
+Accessibilty has been tested using wave.webaim online tool. There were problems related to the contrast between colours of the button used in the submission of the form.
+
+### Incorrect contrast
+![alt incorrect contrast](images/btn0.jpg)
+
+### Correct contrast
+![alt correct contrast](images/btn1.jpg)
