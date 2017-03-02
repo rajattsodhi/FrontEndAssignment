@@ -14,11 +14,11 @@ This is a personal profile website.
 
 ### HTML5
 
-HTML5 semantics have been used and tags such as video.
+HTML5 semantics have been used and tags such as video,header,nav,main,section,article and footer.
 
 ### CSS
 
-The slider is completely developed using HTML and CSS only using also some tranitions. CSS3 animations are also used (Menu in small devices). Mobile first approach has been used.
+The slider is completely developed using HTML and CSS only using also some transitions. CSS3 animations are also used (Menu in small devices). Mobile first approach has been used.
 
 ### JavaScript
 
@@ -36,7 +36,7 @@ As each menu item is related to the other menu items they are grouped close toge
 
 ### Alignment
 
-Each menu item is aligned near each other. As the weather is a separate element but still part of the header is positioned to the right allowing to distinguish the two elements (menu and widget).
+Each menu item is aligned near each other. As the weather is a separate element but still part of the header it is positioned to the right allowing to distinguish the two elements (menu and widget).
 
 ### Repetition
 
@@ -48,7 +48,7 @@ This principle is applied to the sections by giving to one sectione the a grey c
 
 ## Information Architecture
 
-After looking the behaviour of real users it was clear that the section of education and experience was not correctly structured. The problem was related to the fact that each part of the section could not be easily distinguished. The solution to this problem a line has been added to separate each part of the section from the other.
+After looking the behaviour of real users it was clear that the section of education and experience were not correctly structured. The problem was related to the fact that each part of the section could not be easily distinguished. The solve this problem a line has been added to separate each part of the section from the other.
 
 ![alt IA](/images/IA.jpg)
 
