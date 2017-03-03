@@ -1,4 +1,17 @@
 /* CSS file for syling components  Mobile first*/
+@keyframes menu{/*need to put the keyframes at the top for IE11*/
+    0%{
+        opacity: 0;
+        transform: rotateY(-90deg) translate(30px);    
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+        transform: rotateY(0deg) translate(0px);
+    }
+}/*//KeyFrames End*/
 body{
   margin: 0;
   font-family: "open_sans", sans-serif; 
@@ -639,6 +652,7 @@ footer p{/*Copyright message*/
     height: 50px; 
     line-height: 50px;
     font-family: "evogria";
+    text-transform: uppercase;
     display: inline-block;
   }
 
@@ -647,23 +661,11 @@ footer p{/*Copyright message*/
 /*media query only for the animations on mobile phone vertical menu****************  *********************** *****/
 @media (max-width: 768px) {
     /*animation for the vertical menu*/
-  @keyframes menu{
-    0%{
-        opacity: 0;
-        transform: rotateY(-90deg) translate(30px);    
-    }
-    50%{
-        opacity: 0.5;
-    }
-    100%{
-        opacity: 1;
-        transform: rotateY(0deg) translate(0px);
-    }
-  }/*//KeyFrames End*/
+  
 
   /*animate single li's*/
   input[type=checkbox]:checked ~ #menu li{
-    animation: menu;
+    animation-name: menu;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;    
   }  
