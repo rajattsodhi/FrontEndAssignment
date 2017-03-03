@@ -84,3 +84,7 @@ Accessibilty has been tested using wave.webaim online tool. There were problems 
 
 ### Correct contrast
 ![alt correct contrast](images/btn1.jpg)
+
+## Responsiveness
+![alt responsiveness](images/responsive.jpg)
+![alt responsiveness2](images/responsive2.jpg)
