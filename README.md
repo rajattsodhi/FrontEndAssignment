@@ -16,6 +16,11 @@ This is a personal profile website.
 
 HTML5 semantics have been used and tags such as video,header,nav,main,section,article and footer.
 
+Here is a picture of the validation of HTML.
+![alt sketch](/images/validation.jpg)
+
+As it possible to notice there is a warning about the header eleemnt not used in article.This is because article is a container for the slides but can be seen as an article with the controls button.
+
 ### CSS
 
 The slider is completely developed using HTML and CSS only using also some transitions. CSS3 animations are also used (Menu in small devices). Mobile first approach has been used.
