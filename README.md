@@ -37,8 +37,10 @@ FlexBox has been used in the Contact section to solve the problem of same heigh 
 Javascript has been used for smooth scrolling. Additionally the weather widget also uses JavaScript to get JSON data from APIXU API.
 Before OpenWeather API was used but it was not possible to send https requests and this led to mixed content error while trying to display the website on GitHub Pages.
 Javascript has also been used to create animated progress bars that are displayed when the user clicks on the icons in the About section.
+![alt sketch](/images/bar.jpg)
 Additionally Hammer.js has been used to enable the users with touch screen devices to get the hoover effect.
 Lastly the form submission displays a dialog using a polifyll.
+![alt sketch](/images/dialog.jpg)
 
 ## PARC principles
 
@@ -70,7 +72,7 @@ After looking the behaviour of the users while trying to use the website and fin
 
 ## Accessibility 
 
-Accessibilty has been tested using wave.webaim online tool. There were problems related to the contrast between colours of the button used in the submission of the form. Additionally in the form the for attribute has been added in order to make the website accessible from screen readers.
+Accessibilty has been tested using wave.webaim online tool. There were problems related to the contrast between colours of the button used in the submission of the form. Additionally in the form the for attribute has been added in order to make the website accessible from screen readers. All images have an alt attribute to explain what the image shows.
 
 ```html
 <label for="name">Name:</label>
