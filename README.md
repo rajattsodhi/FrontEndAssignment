@@ -19,6 +19,13 @@ HTML5 semantics have been used and tags such as video,header,nav,main,section,ar
 ### CSS
 
 The slider is completely developed using HTML and CSS only using also some transitions. CSS3 animations are also used (Menu in small devices). Mobile first approach has been used.
+FlexBox has been used in the Contact section to solve the problem of same heigh of two floated elemnts (get the columns of same height). 
+```css
+  #contact .row{
+    display: flex;
+  }
+```
+
 
 ### JavaScript
 
@@ -32,11 +39,11 @@ Lastly the form submission displays a dialog using a polifyll.
 
 ### Proximity
 
-As each menu item is related to the other menu items they are grouped close together.
+As each menu item is related to the other menu items they are grouped close together. Further visual guidence is given with the current house style of the website, the white and gray background switching allows noticable differences between sections. 
 
 ### Alignment
 
-Each menu item is aligned near each other. As the weather is a separate element but still part of the header it is positioned to the right allowing to distinguish the two elements (menu and widget).
+Each menu item is aligned near each other. The weather widget is a separate element but still part of the header, it is positioned to the right allowing to distinguish the two elements (menu and widget). Within the about section of the website, all icons and their meter bars are perfectly alligned to give a professional feel. In the portfolio section all the images are of the same size in order to allow correct alignment.
 
 ### Repetition
 
