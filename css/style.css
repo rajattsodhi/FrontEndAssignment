@@ -83,7 +83,8 @@ header{
   width: 100%;
   }
 
-#menu li:hover a {/*hovering over link change text color*/
+
+#menu li:hover a{/*hovering over link change text color*/
   color: #000;
 }
 
@@ -179,8 +180,15 @@ input[type=checkbox]:checked ~ #menu{
 .pr{
   font-size: 4em;
   cursor: pointer;
+  border-radius:5px;
+  box-shadow: 0 0 5px -1px rgba(0,0,0,0.6);
+  background-color:#fff;
 }
 
+.pr:hover{
+ box-shadow: 0 0 5px -1px rgba(0,0,0,1);
+}
+    
 #about p{
   padding: 0 10%;
     
