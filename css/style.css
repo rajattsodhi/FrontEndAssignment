@@ -84,7 +84,7 @@ header{
   }
 
 
-#menu li:hover a{/*hovering over link change text color*/
+#menu li a:hover, #menu li a:active{/*hovering over link change text color*/
   color: #000;
 }
 
